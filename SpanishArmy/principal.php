@@ -31,7 +31,7 @@ en caso de que el rol del usuario introducido sea admin, te lleva a una pagina w
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="cuerpo">
+<body background="img/fondo2.jpg">
 
 <div class="grande">
     <header id="principal">

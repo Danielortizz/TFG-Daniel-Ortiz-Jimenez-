@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Spanish Army</title>
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-</head>
-<body>
+	<head>
+		<title>Spanish Army</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<link rel="shortcut icon" href="img/logo.png">
+	</head>
+	<body background="img/fondo2.jpg">
 
 	<header>
 
- <div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
+ 	<div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
 
 	<ul class="nav justify-content-center" id="barra">
 	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -29,6 +30,11 @@
 		      				<li><a class="dropdown-item" href="mochilas.php">MOCHILAS MILITARES</a></li>
 	    		   </ul>
 	        </li>
+
+	        <li class="nav-item">
+	        <a class="nav-link" href="ofertas.php">OFERTAS</a>
+	        </li>
+
 	        <li class="nav-item">
 	        <a class="nav-link" href="noticias.php">NOTICIAS</a>
 	        </li>
@@ -52,10 +58,16 @@
 
 	    <ul class="nav justify-content-end" id="barra">
 	    	 <li class="nav-item">
-		    <a class="nav-link" aria-current="page" href="login.html">Login</a>
+		    <a class="nav-link" aria-current="page" href="login.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+ 			<path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+  			<path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+			</svg> Login</a>
 		  </li>
 		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="ingresar_usuario.html">Registrate</a>
+		    <a class="nav-link active" aria-current="page" href="ingresar_usuario.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+  			<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  			<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+			</svg> Registrate</a>
 		  </li>
 </ul>
 
@@ -64,29 +76,34 @@
 
 <div class="cuerpo">
 
+		<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+ 		 <ol class="breadcrumb">
+   			<li class="breadcrumb-item"><a href="home.php">Home</a></li>
+   			<li class="breadcrumb-item">Acceso a Tropa</li>
+    		<li class="breadcrumb-item"><a href="baremo.php">Baremo 2021</a></li>
+  		</ol>
+	</nav>
+
  <div align="center" class="cuadro">
 
- 	<h1><FONT FACE="Impact">BAREMO 2020</FONT></h1>
+ 	<p align="center"><FONT FACE="Impact" size="500px" class="titulocarrusel" >BAREMO 2021</FONT></p>
 
- 	<p class="maemia"><b>Consulta aquí los méritos que puedes acreditar para aumentar tu baremo!
+ 	<p style="background: white;"><b>Consulta aquí los méritos que puedes acreditar para aumentar tu baremo!
 	La tabla se encuentra actualizada en relación al último ciclo publicado en el BOE (Primer ciclo 2020), en ella puedes ver la puntuación que puedes obtener acreditando con documentación oficial los distintos tipos de méritos que se tienen en cuenta para la primera parte del proceso, la fase de concurso.
 
 	Si quieres calcular directamente tus puntos, el número de aciertos que necesitas para optar a tu plaza deseada o la nota final cuando hayas realizado los test psicotécnicos… Te recomendamos que uses nuestra calculadora!</b></p>
 
-	<img src="img/Baremo2020.png"></img>
+	<img src="img/Baremo2020.png" style="margin-bottom: 10px;"></img>
 
-	<p class="maemia"><b>La puntuación máxima en los méritos generales y académicos no será superior a 36 puntos.
+	<p style="background: white;" ><b>La puntuación máxima en los méritos generales y académicos no será superior a 36 puntos.
 	La puntuación máxima en los méritos militares no será superior a 4 puntos.
 	Si se acreditan varios méritos académicos se valorará únicamente el de mayor puntuación.
 	Si se acreditan varios permisos de conducción se valorará únicamente el de mayor clase.</p>
 
 
-	<p class="maemia">Como podéis observar, a partir de este 2020, desde un grado medio hasta un doctorado cuentan 16 puntos por lo que es una gran oportunidad para todos aquellos que os presentéis con bachiller, grado medio o grado superior.
-
+	<p style="background: white;" >Como podéis observar, a partir de este 2020, desde un grado medio hasta un doctorado cuentan 16 puntos por lo que es una gran oportunidad para todos aquellos que os presentéis con bachiller, grado medio o grado superior.
 	Para todos aquellos que os presentéis con la E.S.O y quizá el carnet de coche os recomiendo esperar y sacar mínimo un grado medio.
-
 	Si no os gusta estudiar, obtened el permiso de la clase C ; os facilitará mucho el acceso a tropa.
-
 	Y no olvidéis echar un vistazo a nuestros vídeos donde explicamos detalladamente como acceder al ejército!</b></p>
 
  </div>	
@@ -94,11 +111,14 @@
 </div>
 
 
- <footer>
- 		
- 		<div>
+ <footer>	
+ 		<div> 
 
-			<p class="parrafo-footer">SIGUENOS EN:</p>	
+ 			<p class="parrafo-footer" style="margin-left: 25px;">MAPA DEL SITIO
+			<p class="parrafo-footer" style="margin-left: 25px;">
+			<a href="mapadelsitio.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: white; width: 30px; height: 30px;" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
+  			<path d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046L8.473.337z"/>
+			</svg></a><br>
 
 			<div class="redes-footer">
 				<a href="https://www.instagram.com/"><svg id="iconos" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -142,9 +162,8 @@
 			
 
 			<hr>
-			<h5>© 2021 Spanish Army - Todos los Derechos Reservados</h5>
+			<h5 style="color: white;" >© 2021 Spanish Army - Todos los Derechos Reservados</h5>
 	</div>
-
 
  </footer>
 

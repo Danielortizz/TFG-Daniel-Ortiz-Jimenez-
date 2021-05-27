@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Spanish Army</title>
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-</head>
-<body>
+	<head>
+		<title>Spanish Army</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="shortcut icon" href="img/logo.png">
+	</head>
+<body background="img/fondo2.jpg">
 
  <header>
 
  <div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
 
 	<ul class="nav justify-content-center" id="barra">
-	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="margenes">
 	  		<div class="container-fluid">
 	   		<a class="navbar-brand" href="home.php">SPANISH ARMY</a>
 	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,39 +25,42 @@
 	        <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">TIENDA</a>
 	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="camisetas.php">CAMISETAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="pantalones.php">PANTALONES MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="botas.php">BOTAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="mochilas.php">MOCHILAS MILITARES</a></li>
+		      				<li><a class="dropdown-item" href="camisetasadmin.php">CAMISETAS MILITARES</a></li>
+		      				<li><a class="dropdown-item" href="pantalonesadmin.php">PANTALONES MILITARES</a></li>
+		      				<li><a class="dropdown-item" href="botasadmin.php">BOTAS MILITARES</a></li>
+		      				<li><a class="dropdown-item" href="mochilasadmin.php">MOCHILAS MILITARES</a></li>
 	    		   </ul>
 	        </li>
-	        <li class="nav-item">
-	        <a class="nav-link" href="noticias.php">NOTICIAS</a>
-	        </li>
-	        <li class="nav-item">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">ACCESO A TROPA</a>
-					<li><a class="dropdown-item" href="exclusiones.php">EXCLUSIONES</a></li>
-		      				<li><a class="dropdown-item" href="baremo.php">BAREMO 2021</a></li>
-		      				<li><a class="dropdown-item" href="cefot.php">MATERIAL CEFOT</a></li>
-		      				<li><a class="dropdown-item" href="preguntas.php">PREGUNTAS FRECUENTES</a></li>
 
-	        </li>
 	        <li class="nav-item">
-	        <a class="nav-link" href="dieta.php">DIETA Y ENTRENO</a>
+	        <a class="nav-link" href="ofertasadmin.php">OFERTAS</a>
 	        </li>
+
+	        <li class="nav-item">
+	        <a class="nav-link" href="noticiasadmin.php">NOTICIAS</a>
+	        </li>
+	        
+	        <li class="nav-item">
+	        <a class="nav-link" href="dietaadmin.php">DIETA Y ENTRENO</a>
+	        </li>
+
+	        <li class="nav-item">
+	        <a class="nav-link" href="paneladmin.php">PANEL USUARIOS</a>
+	        </li>
+
 	        </ul>
 	    	</div>
 	        </div>
 	    </nav>
 
 	    <ul class="nav justify-content-end" id="barra">
-	    	 <li class="nav-item">
-		    <a class="nav-link" aria-current="page" href="login.html">Login</a>
-		  </li>
 		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="ingresar_usuario.html">Registrate</a>
+		    <a class="nav-link active" aria-current="page" href="home.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+			<path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+			<path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+			</svg> Cerrar Sesion</a>
 		  </li>
-</ul>
+		</ul>
 
 	</ul>
 
@@ -63,16 +68,164 @@
 
  <div class="cuerpo">
 
- 		
+ 	<div class="container">
+
+			<p align="center"><FONT FACE="Impact" size="300px" class="titulocarrusel" >OFERTAS</FONT></p>
+
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 500px; margin-left: 27%;">
+
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+				</ol>
+
+				<div class="carousel-inner" id="jaja">
+
+					<?php
+
+					//Cogemos los archivos que vamos a necesitar
+						require 'bd/conectorBD.php';
+						require 'DAOusuarios.php';
+						require 'DAOcamisetas.php';
+						require 'DAObotas.php';
+						require 'DAOmochilas.php';
+						require 'DAOpantalones.php';
+						require 'DAOofertas.php';
+
+					//Nos conectamos a la base de datos
+                        $conexion = conectar(true);
+					
+					//Usamos la funcion para poder mostrar los datos de nuestra base de datos en los carruseles
+						$consulta = enseñarOfertas($conexion);
+						
+						$i = 0;
+
+						//Muestra en bucle todos los campso de la consulta
+						while($fila = mysqli_fetch_assoc($consulta)) {
+					?>
+
+					<div class="item <?php echo ($i == 0) ? 'active' : '';?>" >
+
+						<img loading="eager" src="<?php echo $fila['Imagen'];?>" alt="" style="width:100%; height:350px;">
+
+					</div>
+
+					<?php
+
+							//incrementamos para que no se repita siempre la misma imagen
+							$i++;
+							}
+					?>
+
+				</div>
+
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+						<span class="sr-only">Anterior</span>
+				</a>
+
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+						<span class="sr-only">Siguiente</span>
+				</a>
+
+			</div>
+
+		</div>
+
+		<div align="center" class="cuadro">
+
+		<h1><FONT FACE="Impact" class="titulocarrusel" >PREGUNTAS FRECUENTES</FONT></h1>
+
+		<img src="img/preguntas.png"></img>
+
+		<h4><font face="Impact" class="titulocarrusel" style="color: white; ">¿Cuánto gana un militar de tropa y marinería?</font></h4>
+
+		<p  style="background: white" align="left">Esto varía en función de la unidad de destino ya que cada una tiene diferentes complementos. Pero para que os hagáis una idea el sueldo medio de un soldado recién llegado oscila entre los 950 y los 1075 euros.</p></h4>
+
+		<h4><font face="Impact" class="titulocarrusel" style="color: white; ">¿Cuáles son los requisitos mínimos para el acceso a tropa?</font></h4>
+
+		<p  style="background: white" align="left">Como requisitos mínimos deberéis tener 18 años y no haber cumplido los 29 el día de incorporación al centro de formación militar. Estar en posesión de la ESO, carecer de antecedentes penales y poseer la nacionalidad española. Para más información visita nuestras páginas de requisitos y exclusiones</p></h4>
+
+		<h4><font face="Impact" class="titulocarrusel" style="color: white; ">¿Cuándo y cómo puedo ascender a suboficiales?</font></h4>
+
+		<p  style="background: white" align="left">Si no eres militar podrás presentarte a las convocatorias de promoción directa siempre y cuando cumplas con los requisitos de edad y estudios, 21 años sin titulación previa y 26 con titulación previa.<br>
+
+		Si eres tropa, cuando lleves un año de servicio ya podrás presentarte a las convocatorias por promoción interna, hasta los 31 años sin titulación previa y hasta los 33 con titulación.<br></h4>
+
+		<h4><font face="Impact" class="titulocarrusel" style="color: white; ">¿Dónde pedir cita para la convocatoria?</font></h4>
+
+		<p  style="background: white" align="left" > – Por teléfono: 902 432 100 o 913 089 798</p>
+		<p  style="background: white" align="left"> – Online, en la página web de reclutamiento.</p>
+		<p  style="background: white" align="left"> – En persona en una Subdelegación de Defensa, llevando tu DNI. Consúltalas aquí</p></h4>
+
+		<img src="img/delegaciones.png" style="margin-bottom: 10px;"></img>
+
+		<h4><font face="Impact" class="titulocarrusel" style="color: white; ">Fases de la convocatoria</font></h4>
+
+		<p style="background: white" align="left">Está compuesto por dos fases, la primera consta de las pruebas de concurso y de oposición. Y posteriormente, una segunda fase que comprende las pruebas de reconocimiento médico, prueba de personalidad y las pruebas de aptitud física.
+
+		A la segunda fase pasarán únicamente quienes consigan nota como titular para alguna de las plazas elegidas, además de una serie de reservas para cubrir posibles bajas durante el proceso.<br></p></h4>
+
+		<h4><font face="Impact" class="titulocarrusel" style="color: white; ">¿Cuales son las marcas de las pruebas físicas?</font></h4>
+
+		<img style="margin-bottom: 10px;" src="img/fisica1.jpg"></img><br>
+
+		<img style="margin-bottom: 10px;" src="img/fisica2.jpg"></img><br>
+
+		<h4><font face="Impact" class="titulocarrusel" style="color: white;">¿Dónde están los centros de formación?</font></h4>
+
+		<p style="background: white" align="left" >EJERCITO DE TIERRA<br>
+		CEFOT 1 (Cáceres): Infantería ligera, infantería acorazada/mecanizada.<br>
+		CEFOT 2 (San Fernando, Cádiz): BRIPAC, caballería, artillería de campaña, artillería de costa y antiaérea, ingenieros y transmisiones.<br>
+
+		ARMADA<br>
+		ESCAÑO (Ferrol, A Coruña): Operaciones y sistemas, energía y propulsión.<br>
+		ESENGRA (Ferrol, A Coruña): Aprovisionamiento, maniobras y navegación.<br>
+		– EIMGAF (Cartagena, Murcia): Infantería de marina.<br>
+
+		EJERCITO DEL AIRE<br>
+		ETESDA (Zaragoza): Todas las especialidades en la formación general.</p><br></b></h4>
+
+		<img style="margin-bottom: 10px;" src="img/imagen1.jpg" width="600" height="250"></img>
+
+		<h1><FONT FACE="Impact" class="titulocarrusel" >DOCUMENTACION CEFOT</FONT></h1>
+
+		<img style="margin-bottom: 10px;" src="img/cefot.jpg" width="700" height="350"></img>
+
+		<h4 class="tituloss" ><FONT class="titulocarrusel" style="color: white;" FACE="Impact"><p>Documentacion Personal para el CEFOT</p></FONT>
+		
+		<p align="left"  style="background: white">* DNI- En caso de no disponer de él, deberás adjuntar un documento que justifique su ausencia.
+
+		<br>* Tarjeta de la Seguridad Social
+
+		<br>* Carnet de conducir
+
+		<br>* Ficha de datos bancarios en la que figure el IBAN de tu cuenta ( Para que puedan ingresarte la nómina )
+
+		<br>* Cartilla de vacunación - Si la llevas es posible que puedas librarte de alguna de las vacunas que te pondrán, aunque no es lo habitual.</p>
+
+		<p align="left" style="background: white">En caso de llevar vehículo propio.
+		Si llevais vuestro vehículo personal, es fundamental que tengais toda la documentación en regla, ITV y seguro en vigor etcétera, si no, no podreis acceder al interior de la base y os tocará aparcar dios sabe donde.</p>
+
+		<p align="left" style="background: white">En caso de que el vehículo no esté a vuestro nombre, tendréis que adjuntar junto con la documentación necesaria, una autorización del propietario y una fotocopia de su DNI. En la autorización basta con que escriba que os autoriza a conducir su vehículo por razón de parentesco por ejemplo. También deberá adjuntar su nombre y su DNI y por supuesto firmar dicha autorización.</p><br></h4>
+
+	</div>
 
  </div>
 
 
- <footer>
+  <footer>
  		
- 		<div>
+ 		<div> 
 
-			<p class="parrafo-footer">SIGUENOS EN:</p>	
+ 			<p class="parrafo-footer" style="margin-left: 25px;">MAPA DEL SITIO
+			<p class="parrafo-footer" style="margin-left: 25px;">
+			<a href="mapadelsitio.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: white; width: 30px; height: 30px;" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
+  			<path d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046L8.473.337z"/>
+			</svg></a><br>
 
 			<div class="redes-footer">
 				<a href="https://www.instagram.com/"><svg id="iconos" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -116,12 +269,13 @@
 			
 
 			<hr>
-			<h5>© 2021 Spanish Army - Todos los Derechos Reservados</h5>
+			<h5 style="color: white;" >© 2021 Spanish Army - Todos los Derechos Reservados</h5>
 	</div>
-
 
  </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>

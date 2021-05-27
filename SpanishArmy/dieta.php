@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Spanish Army</title>
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-</head>
-<body>
+	<head>
+		<title>Spanish Army</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<link rel="shortcut icon" href="img/logo.png">
+	</head>
+	<body background="img/fondo2.jpg">
 
  <header>
 
@@ -29,6 +30,11 @@
 		      				<li><a class="dropdown-item" href="mochilas.php">MOCHILAS MILITARES</a></li>
 	    		   </ul>
 	        </li>
+
+	        <li class="nav-item">
+	        <a class="nav-link" href="ofertas.php">OFERTAS</a>
+	        </li>
+
 	        <li class="nav-item">
 	        <a class="nav-link" href="noticias.php">NOTICIAS</a>
 	        </li>
@@ -53,10 +59,16 @@
 
 	    <ul class="nav justify-content-end" id="barra">
 	    	 <li class="nav-item">
-		    <a class="nav-link" aria-current="page" href="login.html">Login</a>
+		    <a class="nav-link" aria-current="page" href="login.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+ 			<path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+  			<path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+			</svg> Login</a>
 		  </li>
 		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="ingresar_usuario.html">Registrate</a>
+		    <a class="nav-link active" aria-current="page" href="ingresar_usuario.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+  			<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  			<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+			</svg> Registrate</a>
 		  </li>
 </ul>
 
@@ -65,6 +77,13 @@
  </header>
 
  <div class="cuerpo">
+
+ 	<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+ 		 <ol class="breadcrumb">
+   			<li class="breadcrumb-item"><a href="home.php">Home</a></li>
+    		<li class="breadcrumb-item"><a href="dieta.php">Dieta y Entreno</a></li>
+  		</ol>
+	</nav>
 
 	<div class="row">
 
@@ -78,7 +97,7 @@
 //Nos conectamos a la base de datos
 	$conexion = conectar(true);
 
-//usamos una funcion que nos permite mostrar las consolas de la base de datos
+//usamos una funcion que nos permite mostrar las dietas de la base de datos
 	$result = mostrardieta($conexion);
 
 //recorre la consulta y los muestra
@@ -86,18 +105,21 @@
 
 	?>
 
-	<div class="card" id="carta-catalogogg" style="width: 55rem;">
-		  		<img class="imagen-catalogo2" src="<?php echo $mostrar['Imagen'] ?>" class="card-img-top">
-		  			<div class="card-body">
-			    		<h5 class="card-title" id="titulo2">TIPO DE DIETA: <b><br><?php echo $mostrar['Tipo de dieta'] ?></h5></b><br>
-					   		<p class="card-text" align="center">ALIMENTOS: <b><br><?php echo $mostrar['Ingredientes'] ?> </b></p>
-					   		<p class="card-text" id="titulo" align="center">GUIA DE ENTRENAMIENTO <b><br><?php echo $mostrar['Entrenamiento'] ?> </b></p>
-					   		<p class="card-text" id="titulo" align="center">PERIODO DE RECUPERACION POST EJERCICIO<b><br><?php echo $mostrar['Recuperacion post ejercicio'] ?> </b></p>
+	<div class="card" id="carta-catalogog" style="width: 40rem; margin-right: auto; margin-left: auto;">
+
+		  		<img class="imagenes" id="ñao" src="<?php echo $mostrar['Imagen'] ?>" >
+
+		  			<div class="card-body" id="jeje" style="padding: 0rem 0rem;">
+
+			    		<h5 class="card-title" id="titulocarta" style="font-size: 40px;"><u><?php echo $mostrar['Tipo de dieta']?></h5></u>
+
+					   		<p class="card-text" align="center" id="jeje" style="color: white;"><u style="color: white; font-size: 30px;">ALIMENTOS: </u><br><?php echo $mostrar['Ingredientes'] ?> <u>></p>
+
+					   		<p class="card-text" align="center" id="jeje" style="color: white;"><u style="font-size: 30px;">GUIA DE ENTRENAMIENTO: </u><br><?php echo $mostrar['Entrenamiento'] ?> </b></p>
+
+					   		<p class="card-text" align="center" id="jeje" style="color: white;"><u style="font-size: 30px;">PERIODO DE RECUPERACION POST EJERCICIO</u><br><?php echo $mostrar['Recuperacion post ejercicio'] ?></p>
 		 	 		</div>	 	 				
 	</div>
-
-
-
 
 	<?php
 
@@ -111,10 +133,13 @@
 
 
  <footer>
- 		
- 		<div>
+ 		<div> 
 
-			<p class="parrafo-footer">SIGUENOS EN:</p>	
+ 			<p class="parrafo-footer" style="margin-left: 25px;">MAPA DEL SITIO
+			<p class="parrafo-footer" style="margin-left: 25px;">
+			<a href="mapadelsitio.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: white; width: 30px; height: 30px;" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
+  			<path d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046L8.473.337z"/>
+			</svg></a><br>
 
 			<div class="redes-footer">
 				<a href="https://www.instagram.com/"><svg id="iconos" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -158,9 +183,8 @@
 			
 
 			<hr>
-			<h5>© 2021 Spanish Army - Todos los Derechos Reservados</h5>
+			<h5 style="color: white;" >© 2021 Spanish Army - Todos los Derechos Reservados</h5>
 	</div>
-
 
  </footer>
 

@@ -4,14 +4,16 @@
 session_start();
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Spanish Army</title>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="shortcut icon" href="img/logo.png">
 </head>
-<body>
+<body background="img/fondo2.jpg">
 
 	<header>
 
@@ -79,7 +81,7 @@ session_start();
 			<td>
 				<ul class="nav justify-content-center">
 			  		<li class="nav-item" id="botones">
-			    		<button ><a href="borrarusuario.php?idUsuario=<?php  echo $_SESSION['idUsuario'];?>" value="eliminar" name="eliminar" onclick="return ConfirmarEliminar()">elimina usuario</button>
+			    		<button><a href="borrarusuario.php?idUsuario=<?php  echo $_SESSION['idUsuario'];?>" value="eliminar" name="eliminar" onclick="return confirm('Estás seguro que quieres darte de baja?');">Dar de baja</button>
 			  		</li>
 				</ul>
 			</td>
@@ -92,11 +94,15 @@ session_start();
 
  </div>
 
- <footer>
+<footer>
  		
- 		<div>
+ 		<div> 
 
-			<p class="parrafo-footer">SIGUENOS EN:</p>	
+ 			<p class="parrafo-footer" style="margin-left: 25px;">MAPA DEL SITIO
+			<p class="parrafo-footer" style="margin-left: 25px;">
+			<a href="mapadelsitio.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: white; width: 30px; height: 30px;" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
+  			<path d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046L8.473.337z"/>
+			</svg></a><br>
 
 			<div class="redes-footer">
 				<a href="https://www.instagram.com/"><svg id="iconos" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -140,9 +146,8 @@ session_start();
 			
 
 			<hr>
-			<h5>© 2021 Spanish Army - Todos los Derechos Reservados</h5>
+			<h5 style="color: white;" >© 2021 Spanish Army - Todos los Derechos Reservados</h5>
 	</div>
-
 
  </footer>
 

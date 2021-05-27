@@ -7,23 +7,25 @@
 //Nos conectamos a la base de datos
 	$conexion = conectar(true);
 
-//Y cogemos el id de productos por que lo vamos a necesitar
-	$idusuario = $_GET['idusuario'];
-	$consulta = enseñarusuarioporid($conexion,$idusuario);
+	session_start();
+
+//Y cogemos el id de usuario por que lo vamos a necesitar
+	$idUsuario = $_SESSION['idUsuario'];
+	$consulta = enseñarusuarioporid($conexion,$idUsuario);
 	$fila = mysqli_fetch_assoc($consulta);
 
 ?>
 
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Actualizar Usuario</title>
-	</head>
+		<head>
+			<meta charset="utf-8">
+			<title>Actualizar Usuario</title>
+		</head>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-<body>
+<body background="img/fondo2.jpg">
 
 	<header>
 
@@ -47,6 +49,11 @@
 		      				<li><a class="dropdown-item" href="preguntas.php">PREGUNTAS FRECUENTES</a></li>
 	    		   </ul>
 	        </li>
+
+	            <li class="nav-item">
+	        <a class="nav-link" href="ofertasadmin.php">OFERTAS</a>
+	        </li>
+	        
 	        <li class="nav-item">
 	        <a class="nav-link" href="noticias.php">NOTICIAS</a>
 	        </li>
@@ -82,8 +89,8 @@
 <div class="cuerpo">
 
 	<center>
-<div class="card" id="card-login-grande" style="width: 18rem;">
-	<div class="card-body" id="card-html">	
+		<div class="card" id="card-login-grande" style="width: 18rem;">
+		<div>	
 
 	<form action="modificarrusuario.php" method="POST" enctype="multipart/form-data">
 			
@@ -121,7 +128,6 @@
 		<span id="dni_error">El Dni introducido no es correcto</span>	
 
 		<input type="submit" value="Actualizar" name="btnregistrar"><br>
-		<input type="hidden"  name="idusuario" value="<?php echo $idusuario ?>"><br>
 
 	</form>	
 	</center>
@@ -129,14 +135,16 @@
 	</div>
 </div>
 
-
 </div>
 
-<footer>
- 		
- 		<div>
+ <footer>	
+ 		<div> 
 
-			<p class="parrafo-footer">SIGUENOS EN:</p>	
+ 			<p class="parrafo-footer" style="margin-left: 25px;">MAPA DEL SITIO
+			<p class="parrafo-footer" style="margin-left: 25px;">
+			<a href="mapadelsitio.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: white; width: 30px; height: 30px;" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
+  			<path d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2H2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h1.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11H7.5v2.5a.5.5 0 0 0 1 0V11h2.592l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H9.046L8.473.337z"/>
+			</svg></a><br>
 
 			<div class="redes-footer">
 				<a href="https://www.instagram.com/"><svg id="iconos" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -180,9 +188,8 @@
 			
 
 			<hr>
-			<h5>© 2021 Spanish Army - Todos los Derechos Reservados</h5>
+			<h5 style="color: white;" >© 2021 Spanish Army - Todos los Derechos Reservados</h5>
 	</div>
-
 
  </footer>
 

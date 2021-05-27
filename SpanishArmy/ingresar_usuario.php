@@ -25,13 +25,14 @@ $dni = $_POST['dni'];
  $consulta = insertarUsuarios($conexion,$usuario,$password,$nombre,$apellido1,$apellido2,$telefono, $email, $cp, $provincia, $comunidadautonoma, $dni);
 
 //Si la consulta es encontrada te lleva al principio, si no ees encontrada tee lleva a que te hagas un usuario
+ 
 if($consulta){
 
-   header('Location: login.html');
+   header('Location: ingresar_usuario.html');
 
     } else {
    
-   header('Location: ingresar_usuario.html');
+   header('Location: home.php');
 
  }
 
