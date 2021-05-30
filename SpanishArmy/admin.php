@@ -9,62 +9,7 @@
 	</head>
 <body background="img/fondo2.jpg">
 
- <header>
-
- <div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
-
-	<ul class="nav justify-content-center" id="barra">
-	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="margenes">
-	  		<div class="container-fluid">
-	   		<a class="navbar-brand" href="home.php">SPANISH ARMY</a>
-	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarText">
-	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">TIENDA</a>
-	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="camisetasadmin.php">CAMISETAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="pantalonesadmin.php">PANTALONES MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="botasadmin.php">BOTAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="mochilasadmin.php">MOCHILAS MILITARES</a></li>
-	    		   </ul>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="ofertasadmin.php">OFERTAS</a>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="noticiasadmin.php">NOTICIAS</a>
-	        </li>
-	        
-	        <li class="nav-item">
-	        <a class="nav-link" href="dietaadmin.php">DIETA Y ENTRENO</a>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="paneladmin.php">PANEL USUARIOS</a>
-	        </li>
-
-	        </ul>
-	    	</div>
-	        </div>
-	    </nav>
-
-	    <ul class="nav justify-content-end" id="barra">
-		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="home.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-			<path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
-			<path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-			</svg> Cerrar Sesion</a>
-		  </li>
-		</ul>
-
-	</ul>
-
- </header>
+<?php require('header.php'); ?>
 
  <div class="cuerpo">
 

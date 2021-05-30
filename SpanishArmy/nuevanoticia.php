@@ -23,7 +23,6 @@
 //y como se mueve el archivo a la ruta especificada   
 	move_uploaded_file($imagen,$rutaimagen);
 
-
 //utilizamos la funcion para insertar una noticia
 	$consulta = insertarnoticia($conexion, $titulo, $publicacion, $descripcion, $rutaimagen);
 

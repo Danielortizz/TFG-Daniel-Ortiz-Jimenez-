@@ -1,122 +1,112 @@
-<?php 
-
-//Cogemos los archivos que vamos a necesitar
-    require 'bd/conectorBD.php';
-	require 'DAOusuarios.php';
-
-//inicimaos la session
-    session_start();
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Spanish Army</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<script src='https://www.google.com/recaptcha/api.js' ></script>
 	<link rel="shortcut icon" href="img/logo.png">
 </head>
+
 <body background="img/fondo2.jpg">
 
- <?php require('header.php'); ?>
-
+<?php require('header.php'); ?>
 
  <div class="cuerpo">
 
- 		
-<center>
-	<table class="table table-striped table-dark">
-		<thead>
-			<tr>
-				<th id="th">IdUsuario</th>
-				<th id="th">Usuario</th>
-				<th id="th">Password</th>
-				<th id="th">Nombre</th>
-				<th id="th">Apellido1</th>
-				<th id="th">Apellido2</th>
-				<th id="th">Telefono</th>
-				<th id="th">Email</th>
-				<th id="th">CP</th>
-				<th id="th">Provincia</th>
-				<th id="th">ComunidadAutonoma</th>
-				<th id="th">Rol</th>
-				<th id="th">Dni</th>
-				<td>
-					<ul class="nav justify-content-center">
-		  				<li class="nav-item" id="botones">
-		    				<a href="añadirusuario.php" value="añadir" name="añadir"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
- 							<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-  							<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-							</svg></a>
-		  				</li>
-					</ul>
-				</td>
-			</tr>	
-		</thead>
+ 	<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+ 		 <ol class="breadcrumb">
+   			<li class="breadcrumb-item"><a href="home.php">Home</a></li>
+    		<li class="breadcrumb-item"><a href="ingresar_usuario.html">Registrate</a></li>
+  		</ol>
+	</nav>
 
-		<tbody>
-			<?php  
+<div class="card" id="card-ingresar" >
+<div class="card-body" id="card-ingresar-body">	
+<form class="row g-3" action="ingresar_usuario.php" method="post" name="formulario" id="register" novalidate onsubmit="return validarFormulario();">
 
-			//Nos conectamos a la base de datos
-				 $conexion = conectar(true);
+	<div class="col-md-6">
+	<label class="form-label"><b>Usuario: </b></label>
+	<input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ejemplo: Alumno23">
+	<span id="usuario_error">El usuario introducido no es valido</span>
+	</div>
 
-			//usamos la funcion para coger los usuarios de nuestra base de datos
-				 $result = obtenerUsuarios($conexion);
+	<div class="col-md-6">
+	<label class="form-label"><b>Password: </b></label>
+	<input type="password" name="password" id="password" class="form-control" placeholder="Ejemplo: Alumn@2020">
+	<span id="password_error">La contraseña introducida no es valida</span>
+    </div>
 
-				 //recorremos la consulta
-				 while ($fila = mysqli_fetch_assoc($result)) {?>
+    <div class="col-md-6">
+	<label class="form-label"><b>Nombre: </b></label>
+	<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ejemplo: Daniel">
+	<span id="nombre_error">El Nombre introducido no es valido</span>
+	</div>
 
-				 	<tr>
+	<div class="col-md-6">
+	<label class="form-label"><b>Primer Apellido: </b></label>
+	<input type="text" name="apellido1" id="apellido1" class="form-control" placeholder="Ejemplo: Ortiz">
+	<span id="apellido1_error">Lo introducido no es un apellido</span>
+	</div>
 
-				 		<?php foreach ($fila as $key => $value) {?>
+	<div class="col-md-6">
+	<label class="form-label"><b>Segundo Apellido: </b></label>
+	<input type="text" name="apellido2" id="apellido2" class="form-control" placeholder="Ejemplo: Jimenez">
+	<span id="apellido2_error">Lo introducido no es un apellido</span>
+	</div>
 
-				 			<td id="td"> <?= $value ?> </td>
-				 		
-				 		<?php
-				 			
-				 			}
+	<div class="col-md-6">
+	<label class="form-label"><b>Telefono: </b></label>
+	<input type="text" name="telefono" id="telefono" class="form-control" placeholder="Ejemplo: 678485671">
+	<span id="telefono_error">El numero de telefono introducido no es valido</span>
+	</div>
 
-				 		?>
+	<div class="col-md-6">
+	<label class="form-label"><b>Email: </b></label>
+	<input type="text" name="email" id="email"  class="form-control" placeholder="Ejemplo: mcmartigan3turq@gmail.com">
+	<span id="email_error">El email introducido no es valido</span>
+	</div>
+
+	<div class="col-md-6">
+	<label class="form-label"><b>CP: </b></label>
+	<input type="text" name="cp" id="cp" class="form-control" placeholder="Ejemplo: 52005">
+	<span id="cp_error">El CP introducido no es valido</span>
+	</div>
+
+	<div class="col-md-6">
+	<label class="form-label"><b>Provincia: </b></label>
+	<input type="text" name="provincia" id="provincia" class="form-control" placeholder="Ejemplo: Melilla">
+	<span id="provincia_error">Lo introducido no concuerda con ninguna pronvicia</span>
+	</div>
+
+	<div class="col-md-6">
+	<label class="form-label"><b>Comunidad Autonoma:</b></label>
+	<input type="text" name="comunidadautonoma" id="comunidadautonoma"  class="form-control" placeholder="Ejemplo: Melilla">
+	<span id="comunidadautonoma_error">Lo introducido no concuerda con ninguna comunidad autonoma</span>
+    </div>
+
+    <div class="col-md-6">
+	<label class="form-label"><b>Dni:</b></label>
+	<input type="text" name="dni" id="dni"  class="form-control" placeholder="Ejemplo: 45314598k">
+	<span id="dni_error">El Dni introducido no es correcto</span>
+    </div>
+
+    <div class="g-recaptcha" data-sitekey="6LfOFMYaAAAAANn5vAZ800AKZd1rPgE7-Ct8L9Xy"></div>
 	
-		<td>
-			<ul class="nav justify-content-center">
-		  		<li class="nav-item" id="botones">
-		    		<a href="borrarusuario.php?idUsuario=<?php  echo $fila['idUsuario'];?>" value="eliminar" name="eliminar" onclick="return confirm('Estás seguro que quieres eliminar este usuario?');"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace-reverse" viewBox="0 0 16 16">
-  			<path d="M9.854 5.146a.5.5 0 0 1 0 .708L7.707 8l2.147 2.146a.5.5 0 0 1-.708.708L7 8.707l-2.146 2.147a.5.5 0 0 1-.708-.708L6.293 8 4.146 5.854a.5.5 0 1 1 .708-.708L7 7.293l2.146-2.147a.5.5 0 0 1 .708 0z"/>
-  			<path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7.08a2 2 0 0 0 1.519-.698l4.843-5.651a1 1 0 0 0 0-1.302L10.6 1.7A2 2 0 0 0 9.08 1H2zm7.08 1a1 1 0 0 1 .76.35L14.682 8l-4.844 5.65a1 1 0 0 1-.759.35H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h7.08z"/>
-			</svg></a>
-		  		</li>
-			</ul>
-		</td>
 
-		<td>
-			<ul class="nav justify-content-center">
-		  		<li class="nav-item" id="botones">
-		    		<a class="nav-link active" aria-current="page" href="actualizarusuario.php?idUsuario=<?php echo $fila['idUsuario']; ?>" value="Modificar" name="Modificar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-  			<path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z"/>
-  			<path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"/>
-			</svg></a>
-		  		</li>
-			</ul>
-		</td>
-
-				 	</tr>
-
-				 		<?php
-					
-							}
-
-						?>
-		
-		</tbody>
-
-	</table>
-	</center>
+    <div id="error">
+            <span style="color: red;" id="error">Faltan campos por rellenar o hay algun error</span>
+    </div>
+	<button type="submit" id="boton" class="btn btn-secondary">Registrar</button>
+</form>
+</div>
+ 		
 
  </div>
 
-<footer>
+
+ <footer>
  		
  		<div> 
 
@@ -173,6 +163,8 @@
 
  </footer>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/validacion.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>

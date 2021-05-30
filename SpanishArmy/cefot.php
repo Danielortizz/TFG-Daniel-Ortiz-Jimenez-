@@ -8,70 +8,8 @@
 	</head>
 
 <body background="img/fondo2.jpg">
-	<header>
- 	<div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
-
-	<ul class="nav justify-content-center" id="barra">
-	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  		<div class="container-fluid">
-	   		<a class="navbar-brand" href="home.php">SPANISH ARMY</a>
-	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarText">
-	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">TIENDA</a>
-	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="camisetas.php">CAMISETAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="pantalones.php">PANTALONES MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="botas.php">BOTAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="mochilas.php">MOCHILAS MILITARES</a></li>
-	    		   </ul>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="ofertas.php">OFERTAS</a>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="noticias.php">NOTICIAS</a>
-	        </li>
-	        <li class="nav-item">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">ACCESO A TROPA</a>
-	        <ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="exclusiones.php">EXCLUSIONES</a></li>
-		      				<li><a class="dropdown-item" href="baremo.php">BAREMO 2021</a></li>
-		      				<li><a class="dropdown-item" href="cefot.php">MATERIAL CEFOT</a></li>
-		      				<li><a class="dropdown-item" href="preguntas.php">PREGUNTAS FRECUENTES</a></li>
-
-	        </li>
-	    </ul>
-	        <li class="nav-item">
-	        <a class="nav-link" href="dieta.php">DIETA Y ENTRENO</a>
-	        </li>
-	        </ul>
-	    	</div>
-	        </div>
-	    </nav>
-
-	    <ul class="nav justify-content-end" id="barra">
-	    	 <li class="nav-item">
-		    <a class="nav-link" aria-current="page" href="login.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
- 			<path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
-  			<path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-			</svg> Login</a>
-		  </li>
-		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="ingresar_usuario.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
-  			<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-  			<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-			</svg> Registrate</a>
-		  </li>
-		</ul>
-
-	</ul>
-</header>
+	
+	<?php require('header.php'); ?>
 
 <div class="cuerpo">
 
@@ -86,15 +24,15 @@
 	<div align="center" class="cuadro">
 
 		<p align="center"><FONT FACE="Impact" size="500px" class="titulocarrusel" >MATERIAL PARA CEFOT Y ESCAÑO 2020</FONT></p>
-		 <img src="img/cefot.jpg" style="margin-bottom: 10px;">
+		 <img src="img/cefot.jpg" class="imagen-header" style="margin-bottom: 10px;">
 
-		<p style="background: white;"><b>No debes de agobiarte en exceso por si llevarás contigo todo lo necesario para iniciar tu carrera militar sin pifiarla antes de tiempo, ya que en los centros de formación te harán entrega de todo el material imprescindible para sobrevivir durante tu agradable estancia en ellos.</p>
+		<p style="background: white; font-size: 20px;">No debes de agobiarte en exceso por si llevarás contigo todo lo necesario para iniciar tu carrera militar sin pifiarla antes de tiempo, ya que en los centros de formación te harán entrega de todo el material imprescindible para sobrevivir durante tu agradable estancia en ellos.</p>
 
-		<h4><font face="Impact" class="titulocarrusel" style="color: white; ">Documentación Personal</font></h4>
+		<h4><font face="Impact" class="titulocarrusel" style="color: white; font-size: 20px;">Documentación Personal</font></h4>
 
-		<p style="background: white;">Comenzamos por lo más básico, la documentación necesaria para tu incorporación al centro de formación militar correspondiente.</p>
+		<p style="background: white; font-size: 20px;">Comenzamos por lo más básico, la documentación necesaria para tu incorporación al centro de formación militar correspondiente.</p>
 		
-		<p style="background: white;"> DNI- En caso de no disponer de él, deberás adjuntar un documento que justifique su ausencia.
+		<p style="background: white; font-size: 20px;"> DNI- En caso de no disponer de él, deberás adjuntar un documento que justifique su ausencia.
 
 		<Br>Tarjeta de la Seguridad Social
 
@@ -104,18 +42,18 @@
 
 		<Br>Cartilla de vacunación - Si la llevas es posible que puedas librarte de alguna de las vacunas que te pondrán, aunque no es lo habitual.</p>
 
-		<p style="background: white;">En caso de llevar vehículo propio.
+		<p style="background: white; font-size: 20px;">En caso de llevar vehículo propio.
 		Si llevais vuestro vehículo personal, es fundamental que tengais toda la documentación en regla, ITV y seguro en vigor etcétera, si no, no podreis acceder al interior de la base y os tocará aparcar dios sabe donde.</p>
 
-		<p style="background: white;">En caso de que el vehículo no esté a vuestro nombre, tendréis que adjuntar junto con la documentación necesaria, una autorización del propietario y una fotocopia de su DNI. En la autorización basta con que escriba que os autoriza a conducir su vehículo por razón de parentesco por ejemplo. También deberá adjuntar su nombre y su DNI y por supuesto firmar dicha autorización.</p><br>
+		<p style="background: white; font-size: 20px;">En caso de que el vehículo no esté a vuestro nombre, tendréis que adjuntar junto con la documentación necesaria, una autorización del propietario y una fotocopia de su DNI. En la autorización basta con que escriba que os autoriza a conducir su vehículo por razón de parentesco por ejemplo. También deberá adjuntar su nombre y su DNI y por supuesto firmar dicha autorización.</p><br>
 
-		<h4><font face="Impact" class="titulocarrusel" style="color: white; ">Material para el CEFOT, ETESDA,Escaño, Graña...</font></h4>
+		<h4><font face="Impact" class="titulocarrusel" style="color: white; font-size: 20px;">Material para el CEFOT, ETESDA,Escaño, Graña...</font></h4>
 
-		<p style="background: white;">Seguramente ya has visto alguna que otra lista de material para el CEFOT, ETESDA etcétera o recomendaciones por la red. Como ya sabrás SpanishArmy ha sido creado por militares con el objetivo de ayudar a futuros militares, por lo que puedes estar completamente tranquilo. Solo incluiremos en la lista lo que realmente vas a necesitar, sin chorradas.</p>
+		<p style="background: white; font-size: 20px;">Seguramente ya has visto alguna que otra lista de material para el CEFOT, ETESDA etcétera o recomendaciones por la red. Como ya sabrás SpanishArmy ha sido creado por militares con el objetivo de ayudar a futuros militares, por lo que puedes estar completamente tranquilo. Solo incluiremos en la lista lo que realmente vas a necesitar, sin chorradas.</p>
 
-		<p style="background: white;">Útiles de aseo - Como es lógico, deberás llevar un neceser con todo lo que necesites para tu higiene personal, cepillo y pasta de dientes, gel de ducha (pequeño), desodorante… A lo que debes prestar especial atención será al material de afeitado; una buena cuchilla y crema de afeitar son fundamentales para cuidar nuestra piel de los afeitados de cada mañana.</p>
+		<p style="background: white; font-size: 20px;">Útiles de aseo - Como es lógico, deberás llevar un neceser con todo lo que necesites para tu higiene personal, cepillo y pasta de dientes, gel de ducha (pequeño), desodorante… A lo que debes prestar especial atención será al material de afeitado; una buena cuchilla y crema de afeitar son fundamentales para cuidar nuestra piel de los afeitados de cada mañana.</p>
 
-		<p style="background: white;">Es importante que incluyas en tu neceser un repelente de mosquitos, sobretodo si vas a entrar durante meses de calor, unas buenas toallitas desmaquillantes y crema nivea para facilitar la eliminación de la pintura de guerra que tendrás que ponerte.</p>
+		<p style="background: white; font-size: 20px;">Es importante que incluyas en tu neceser un repelente de mosquitos, sobretodo si vas a entrar durante meses de calor, unas buenas toallitas desmaquillantes y crema nivea para facilitar la eliminación de la pintura de guerra que tendrás que ponerte.</p>
 
 		<div>
 			<a href="https://www.amazon.es/Authentic-German-Nivea-Creme-available/dp/B00YAI8YGA/ref=as_li_ss_tl?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1GB5Z76J11P2J&dchild=1&keywords=crema+nivea&qid=1590253116&sprefix=crema+niv,aps,811&sr=8-19&linkCode=sl1&tag=militarex-21&linkId=dca78e39493024196fc99d457c75a756&language=es_ES"><img style="margin-bottom: 10px;" src="img/nivea.jpg" width="200" height="200"></img></a>
@@ -123,7 +61,7 @@
 			<a href="https://www.amazon.es/dp/B00GY2IEKG/ref=as_li_ss_tl?coliid=ICPULPMPFKC7K&colid=DOHK7YWUDJVK&psc=1&ref_=lv_ov_lig_dp_it&linkCode=sl1&tag=militarex-21&linkId=18bf95ba02e4c4897c0a5e28ceabb9c1&language=es_ES"><img style="margin-bottom: 10px;"src="img/mosquitos.jpg" width="200" height="200"></img></a>
 		</div>
 
-		<p style="background: white;">Botiquín - Algo a lo que no se suele prestar la atención que merece y que es realmente importante. En los centros de formación es bastante fácil ponerse malo debido a la climatología y a la concentración de gente, por lo que no debes olvidar los medicamentos típicos como paracetamol o ibuprofeno.
+		<p style="background: white; font-size: 20px;">Botiquín - Algo a lo que no se suele prestar la atención que merece y que es realmente importante. En los centros de formación es bastante fácil ponerse malo debido a la climatología y a la concentración de gente, por lo que no debes olvidar los medicamentos típicos como paracetamol o ibuprofeno.
 
 		Por supuesto, debes incluir vendas, esparadrapo, tiritas, alcohol, yodo y algo sin lo cual no podrás vivir, Compeed ampollas. Confía en mi, te hará falta.</p>
 
@@ -133,14 +71,14 @@
 			<a href="https://www.amazon.es/dp/B07YZFFDJ6/ref=as_li_ss_tl?coliid=I151EUU2RQDRVC&colid=DOHK7YWUDJVK&psc=1&ref_=lv_ov_lig_dp_it_im&linkCode=sl1&tag=militarex-21&linkId=68f8b6ffd7b8e6def7acff9ca8f029fe&language=es_ES"><img style="margin-bottom: 10px;" src="img/tiritas.jpg" width="200" height="200"></img></a>
 		</div>
 
-		<p style="background: white;">Kit de costura - Aunque es bastante recomendable llevar un pequeño kit de costura con aguja, tijeras, imperdibles e hilo negro y verde, ya que tendréis que coseros al uniforme diversos parches, os voy a contar mi “trampa”. Como no tengo ni idea de coser y es algo que lleva su tiempo, algo de lo que no siempre dispones en los centros militares de formación, yo utilizaba un pegamento de telas extra fuerte, y la verdad, me funcionó muy bien. Esto solo debéis hacerlo durante la formación, cuando lleguéis a la unidad tenéis que mantener vuestra uniformidad siempre impoluta.</p>
+		<p style="background: white; font-size: 20px;">Kit de costura - Aunque es bastante recomendable llevar un pequeño kit de costura con aguja, tijeras, imperdibles e hilo negro y verde, ya que tendréis que coseros al uniforme diversos parches, os voy a contar mi “trampa”. Como no tengo ni idea de coser y es algo que lleva su tiempo, algo de lo que no siempre dispones en los centros militares de formación, yo utilizaba un pegamento de telas extra fuerte, y la verdad, me funcionó muy bien. Esto solo debéis hacerlo durante la formación, cuando lleguéis a la unidad tenéis que mantener vuestra uniformidad siempre impoluta.</p>
 
 		<div>
 			<a href="https://www.amazon.es/dp/B005G2FD6S/ref=as_li_ss_tl?coliid=I3DB78MJ8KCJJV&colid=DOHK7YWUDJVK&psc=1&ref_=lv_ov_lig_dp_it&linkCode=sl1&tag=militarex-21&linkId=da2c14327b3ddb3839eec2b4fa6b3aef&language=es_ES"><img style="margin-bottom: 10px;" src="img/costura.jpg" width="200" height="200"></img></a>
 			<a href="https://www.amazon.es/dp/B00GW5DJVE/ref=as_li_ss_tl?coliid=IXUJB2UO8KS4I&colid=DOHK7YWUDJVK&psc=1&ref_=lv_ov_lig_dp_it_im&linkCode=sl1&tag=militarex-21&linkId=bd3e052bf44cedf369ad1a9f1ee019b9&language=es_ES"><img style="margin-bottom: 10px;" src="img/pegamento.jpg" width="200" height="200"></img></a>
 		</div>
 
-		<p style="background: white;">Ropa -Otro punto sobre el que veo que se discute bastante en los foros cuando es algo muy simple. NO LLEVES DEMASIADA ROPA o no te cabrá en la taquilla. Te entregarán mucha ropa cu ando llegues. Esto es lo que yo recomiendo llevar:<br>
+		<p style="background: white; font-size: 20px;">Ropa -Otro punto sobre el que veo que se discute bastante en los foros cuando es algo muy simple. NO LLEVES DEMASIADA ROPA o no te cabrá en la taquilla. Te entregarán mucha ropa cu ando llegues. Esto es lo que yo recomiendo llevar:<br>
 
 		- 4 pares de calcetines de deporte<br>
 		- Un par de camisetas civiles junto con alguna chaqueta ( ten en cuenta la época del año en la que estarás )<br>
@@ -154,7 +92,7 @@
 			<a href="https://www.amazon.es/dp/B081DJ2CK6/ref=as_li_ss_tl?coliid=IRF5XHHZZM37K&colid=DOHK7YWUDJVK&psc=0&ref_=lv_ov_lig_dp_it_im&linkCode=sl1&tag=militarex-21&linkId=27ab5f384cd66dabcb5f95c592fac8ce&language=es_ES"><img style="margin-bottom: 10px;" src="img/tennis.jpg" width="200" height="200"></img></a>
 		</div>
 
-		<p style="background: white;">–Material complementario. Realmente no es material para el CEFOT que sea imprescindible, pero lo necesitareis en muchas ocasiones durante vuestra vida militar. A si que no esta de más que compréis lo siguiente:<br>
+		<p style="background: white; font-size: 20px;">–Material complementario. Realmente no es material para el CEFOT que sea imprescindible, pero lo necesitareis en muchas ocasiones durante vuestra vida militar. A si que no esta de más que compréis lo siguiente:<br>
 
 		- Pulpos<br>
 		- Mosquetón. Comprad un par, les daréis uso, sobretodo en la ETESDA <br>

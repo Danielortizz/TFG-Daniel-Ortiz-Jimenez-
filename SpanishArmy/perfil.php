@@ -15,19 +15,7 @@ session_start();
 </head>
 <body background="img/fondo2.jpg">
 
-	<header>
-
- 	<div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
-
-	<ul class="nav justify-content-center" id="barra">
-	    <ul class="nav justify-content-end" id="barra">
-		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="usuario.php">Salir</a>
-		  </li>
-		</ul>
-	</ul>
-
- </header>
+<?php require('header.php'); ?>
 
  <div class="cuerpo">
 

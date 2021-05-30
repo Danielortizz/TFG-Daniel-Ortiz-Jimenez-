@@ -16,7 +16,7 @@
 
 //Funcion para insertar mochila   
     function insertarmochila($conexion, $nombre, $precio, $descripcion, $imagen){
-        $consulta = "INSERT INTO `spanisharmy`.`mochilas` (`Nombre`, `Precio`, `Talla`, `Descripcion`, `Imagen`) VALUES ('$nombre', '$precio', '$descripcion', '$imagen');";
+        $consulta = "INSERT INTO `spanisharmy`.`mochilas` (`Nombre`, `Precio`, `Descripcion`, `Imagen`) VALUES ('$nombre', '$precio', '$descripcion', '$imagen');";
         $resultado = mysqli_query($conexion, $consulta);
         return $resultado;
     }

@@ -7,73 +7,7 @@
 	<link rel="shortcut icon" href="img/logo.png">
 </head>
 <body background="img/fondo2.jpg">
-	<header>
-
- <div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
-
-	<ul class="nav justify-content-center" id="barra">
-	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  		<div class="container-fluid">
-	   		<a class="navbar-brand" href="home.php">SPANISH ARMY</a>
-	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarText">
-	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">TIENDA</a>
-	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="camisetas.php">CAMISETAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="pantalones.php">PANTALONES MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="botas.php">BOTAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="mochilas.php">MOCHILAS MILITARES</a></li>
-	    		   </ul>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="ofertas.php">OFERTAS</a>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="noticias.php">NOTICIAS</a>
-	        </li>
-	        <li class="nav-item">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">ACCESO A TROPA</a>
-					 <ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="exclusiones.php">EXCLUSIONES</a></li>
-		      				<li><a class="dropdown-item" href="baremo.php">BAREMO 2021</a></li>
-		      				<li><a class="dropdown-item" href="cefot.php">MATERIAL CEFOT</a></li>
-		      				<li><a class="dropdown-item" href="preguntas.php">PREGUNTAS FRECUENTES</a></li>
-
-	        </li>
-	    </ul>
-
-	        </li>
-	        <li class="nav-item">
-	        <a class="nav-link" href="dieta.php">DIETA Y ENTRENO</a>
-	        </li>
-	        </ul>
-	    	</div>
-	        </div>
-	    </nav>
-
-	    <ul class="nav justify-content-end" id="barra">
-	    	 <li class="nav-item">
-		    <a class="nav-link" aria-current="page" href="login.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
- 			<path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
-  			<path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-			</svg> Login</a>
-		  </li>
-		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="ingresar_usuario.html" > <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
-  			<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-  			<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-			</svg> Registrate</a>
-		  </li>
-</ul>
-
-	</ul>
-</header>
+	<?php require('header.php'); ?>
 
 <div class="cuerpo">
 
@@ -89,58 +23,58 @@
 
 		<p align="center"><FONT FACE="Impact" size="500px" class="titulocarrusel" >PREGUNTAS FRECUENTES</FONT></p>
 
-		<img src="img/preguntas.png"></img>
+		<img src="img/preguntas.png" class="imagen-header"></img>
 
-		<h4 ><font face="Impact" class="titulocarrusel" style="color: white; ">PREGUNTAS</font></h4>
+		<h4 ><font face="Impact" class="titulocarrusel" style="color: white; font-size: 20px;">PREGUNTAS</font></h4>
 
-		<ul style="background: white;">
-			<b>¿Cuánto gana un militar de tropa y marinería?<br> 
+		<ul style="background: white; font-size: 20px;">
+			¿Cuánto gana un militar de tropa y marinería?<br> 
 			¿Cuáles son los requisitos mínimos para el acceso a tropa?<br> 
 			¿Cuándo y cómo puedo ascender a suboficiales?<br> 
 			Fases de la convocatoria<br> 
 			¿Cuales son las marcas de las pruebas físicas?<br>
-			¿Dónde están los centros de formación?<br></b>
+			¿Dónde están los centros de formación?<br>
 		</ul>
 
-		<h4 style="background: white;" ><FONT FACE="Impact">¿Cuánto gana un militar de tropa y marinería?</FONT></h4>
+		<h4 style="background: white; font-size: 20px; " ><FONT FACE="Impact">¿Cuánto gana un militar de tropa y marinería?</FONT></h4>
 
-		<p style="background: white;"><b>Esto varía en función de la unidad de destino ya que cada una tiene diferentes complementos. Pero para que os hagáis una idea el sueldo medio de un soldado recién llegado oscila entre los 950 y los 1075 euros.</p></b>
+		<p style="background: white; font-size: 20px;">Esto varía en función de la unidad de destino ya que cada una tiene diferentes complementos. Pero para que os hagáis una idea el sueldo medio de un soldado recién llegado oscila entre los 950 y los 1075 euros.</p>
 
-		<h4 style="background: white;" ><FONT FACE="Impact">¿Cuáles son los requisitos mínimos para el acceso a tropa?</FONT></h4>
+		<h4 style="background: white; font-size: 20px;" ><FONT FACE="Impact">¿Cuáles son los requisitos mínimos para el acceso a tropa?</FONT></h4>
 
-		<p style="background: white;"><b>Como requisitos mínimos deberéis tener 18 años y no haber cumplido los 29 el día de incorporación al centro de formación militar. Estar en posesión de la ESO, carecer de antecedentes penales y poseer la nacionalidad española. Para más información visita nuestras páginas de requisitos y exclusiones</p></b>
+		<p style="background: white; font-size: 20px;">Como requisitos mínimos deberéis tener 18 años y no haber cumplido los 29 el día de incorporación al centro de formación militar. Estar en posesión de la ESO, carecer de antecedentes penales y poseer la nacionalidad española. Para más información visita nuestras páginas de requisitos y exclusiones</p>
 
-		<h4 style="background: white;" ><FONT FACE="Impact">¿Cuándo y cómo puedo ascender a suboficiales?</FONT></h4>
+		<h4 style="background: white; font-size: 20px;" ><FONT FACE="Impact">¿Cuándo y cómo puedo ascender a suboficiales?</FONT></h4>
 
-		<p style="background: white;"><b>Si no eres militar podrás presentarte a las convocatorias de promoción directa siempre y cuando cumplas con los requisitos de edad y estudios, 21 años sin titulación previa y 26 con titulación previa.<br>
+		<p style="background: white; font-size: 20px;">Si no eres militar podrás presentarte a las convocatorias de promoción directa siempre y cuando cumplas con los requisitos de edad y estudios, 21 años sin titulación previa y 26 con titulación previa.<br>
 
 		Si eres tropa, cuando lleves un año de servicio ya podrás presentarte a las convocatorias por promoción interna, hasta los 31 años sin titulación previa y hasta los 33 con titulación.<br>
 
-		Échale un vistazo a nuestro vídeo para enterarte de todo lo que necesitas saber.<br></p></b>
+		Échale un vistazo a nuestro vídeo para enterarte de todo lo que necesitas saber.<br></p>
 
-		<h4 style="background: white;"><FONT FACE="Impact">¿Dónde pedir cita para la convocatoria?</FONT></h4>
+		<h4 style="background: white; font-size: 20px;"><FONT FACE="Impact">¿Dónde pedir cita para la convocatoria?</FONT></h4>
 
-		<b><p style="background: white;"> – Por teléfono: 902 432 100 o 913 089 798</p>
-		<p style="background: white;"> – Online, en la página web de reclutamiento.</p>
-		<p style="background: white;"> – En persona en una Subdelegación de Defensa, llevando tu DNI. Consúltalas aquí</p></b>
+		<p style="background: white; font-size: 20px;"> – Por teléfono: 902 432 100 o 913 089 798</p>
+		<p style="background: white; font-size: 20px;"> – Online, en la página web de reclutamiento.</p>
+		<p style="background: white; font-size: 20px;"> – En persona en una Subdelegación de Defensa, llevando tu DNI. Consúltalas aquí</p>
 
-		<img src="img/delegaciones.png" style="margin-bottom: 10px;"></img>
+		<img src="img/delegaciones.png" class="imagen-header" style="margin-bottom: 10px;"></img>
 
-		<h4 style="background: white;"><FONT FACE="Impact">Fases de la convocatoria</FONT></h4>
+		<h4 style="background: white; font-size: 20px;"><FONT FACE="Impact">Fases de la convocatoria</FONT></h4>
 
-		<p style="background: white;"><b>Está compuesto por dos fases, la primera consta de las pruebas de concurso y de oposición. Y posteriormente, una segunda fase que comprende las pruebas de reconocimiento médico, prueba de personalidad y las pruebas de aptitud física.
+		<p style="background: white; font-size: 20px;">Está compuesto por dos fases, la primera consta de las pruebas de concurso y de oposición. Y posteriormente, una segunda fase que comprende las pruebas de reconocimiento médico, prueba de personalidad y las pruebas de aptitud física.
 
-		A la segunda fase pasarán únicamente quienes consigan nota como titular para alguna de las plazas elegidas, además de una serie de reservas para cubrir posibles bajas durante el proceso.<br></p></b>
+		A la segunda fase pasarán únicamente quienes consigan nota como titular para alguna de las plazas elegidas, además de una serie de reservas para cubrir posibles bajas durante el proceso.<br></p>
 
-		<h4 style="background: white;"><FONT FACE="Impact">¿Cuales son las marcas de las pruebas físicas?</FONT></h4>
+		<h4 style="background: white; font-size: 20px;"><FONT FACE="Impact">¿Cuales son las marcas de las pruebas físicas?</FONT></h4>
 
-		<img style="margin-bottom: 10px;" src="img/fisica1.jpg"></img>
+		<img style="margin-bottom: 10px;" class="imagen-header" src="img/fisica1.jpg"></img>
 
-		<img style="margin-bottom: 10px;" src="img/fisica2.jpg"></img>
+		<img style="margin-bottom: 10px;" class="imagen-header" src="img/fisica2.jpg"></img>
 
-		<h4 style="background: white;"><FONT FACE="Impact">¿Dónde están los centros de formación?</FONT></h4>
+		<h4 style="background: white; font-size: 20px;"><FONT FACE="Impact">¿Dónde están los centros de formación?</FONT></h4>
 
-		<p style="background: white;"><b>EJERCITO DE TIERRA<br>
+		<p style="background: white; font-size: 20px;">EJERCITO DE TIERRA<br>
 		CEFOT 1 (Cáceres): Infantería ligera, infantería acorazada/mecanizada.<br>
 		CEFOT 2 (San Fernando, Cádiz): BRIPAC, caballería, artillería de campaña, artillería de costa y antiaérea, ingenieros y transmisiones.<br>
 
@@ -150,9 +84,9 @@
 		– EIMGAF (Cartagena, Murcia): Infantería de marina.<br>
 
 		EJERCITO DEL AIRE<br>
-		ETESDA (Zaragoza): Todas las especialidades en la formación general.</p></b><br>
+		ETESDA (Zaragoza): Todas las especialidades en la formación general.</p><br>
 
-		<img src="img/imagen1.jpg" width="600" height="250" style="margin-bottom: 10px;"></img>
+		<img src="img/imagen1.jpg" width="600" class="imagen-header" height="250" style="margin-bottom: 10px;"></img>
 
 	</div>
 

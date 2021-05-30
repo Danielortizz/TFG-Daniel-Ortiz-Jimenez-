@@ -14,60 +14,8 @@ $dni = $_GET['dni'];
 	<link rel="shortcut icon" href="img/logo.png">
 </head>
 <body background="img/fondo2.jpg">
-	<header>
-
- <div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
-
-	<ul class="nav justify-content-center" id="barra">
-	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  		<div class="container-fluid">
-	   		<a class="navbar-brand" href="home.php">SPANISH ARMY</a>
-	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarText">
-	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">TIENDA</a>
-	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="camisetas.php">CAMISETAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="pantalones.php">PANTALONES MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="botas.php">BOTAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="mochilas.php">MOCHILAS MILITARES</a></li>
-	    		   </ul>
-	        </li>
-	        <li class="nav-item">
-	        <a class="nav-link" href="noticias.php">NOTICIAS</a>
-	        </li>
-	        <li class="nav-item">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">ACCESO A TROPA</a>
-					 <ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="exclusiones.php">EXCLUSIONES</a></li>
-		      				<li><a class="dropdown-item" href="baremo.php">BAREMO 2021</a></li>
-		      				<li><a class="dropdown-item" href="cefot.php">MATERIAL CEFOT</a></li>
-		      				<li><a class="dropdown-item" href="preguntas.php">PREGUNTAS FRECUENTES</a></li>
-
-	        </li>
-	    </ul>
-	        <li class="nav-item">
-	        <a class="nav-link" href="dieta.php">DIETA Y ENTRENO</a>
-	        </li>
-	        </ul>
-	    	</div>
-	        </div>
-	    </nav>
-
-	    <ul class="nav justify-content-end" id="barra">
-	    	 <li class="nav-item">
-		    <a class="nav-link" aria-current="page" href="login.html">Login</a>
-		  </li>
-		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="ingresar_usuario.html">Registrate</a>
-		  </li>
-</ul>
-
-	</ul>
-</header>
+	
+	<?php require('header.php'); ?>
 
 <div class="cuerpo">
 

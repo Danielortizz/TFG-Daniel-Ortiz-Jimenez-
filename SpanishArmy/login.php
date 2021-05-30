@@ -1,96 +1,59 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Spanish Army</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-		<link rel="shortcut icon" href="img/logo.png">
-	</head>
-
+<head>
+	<title>Spanish Army</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<script src='https://www.google.com/recaptcha/api.js' ></script>
+	<link rel="shortcut icon" href="img/logo.png">
+</head>
 <body background="img/fondo2.jpg">
 
- <header>
-
- <div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
-
-	<ul class="nav justify-content-center" id="barra">
-	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  		<div class="container-fluid">
-	   		<a class="navbar-brand" href="home.php">SPANISH ARMY</a>
-	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarText">
-	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">TIENDA</a>
-	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="camisetasadmin.php">CAMISETAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="pantalonesadmin.php">PANTALONES MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="botasadmin.php">BOTAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="mochilasadmin.php">MOCHILAS MILITARES</a></li>
-	    		   </ul>
-	        </li>
-
-	            <li class="nav-item">
-	        <a class="nav-link" href="ofertasadmin.php">OFERTAS</a>
-	        </li>
-	        
-	        <li class="nav-item">
-	        <a class="nav-link" href="noticiasadmin.php">NOTICIAS</a>
-	        </li>
-	        
-	        <li class="nav-item">
-	        <a class="nav-link" href="dietaadmin.php">DIETA Y ENTRENO</a>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="paneladmin.php">PANEL USUARIOS</a>
-	        </li>
-
-	        </ul>
-	    	</div>
-	        </div>
-	    </nav>
-
-	    <ul class="nav justify-content-end" id="barra">
-		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="home.php">Cerrar Sesion</a>
-		  	</li>
-		</ul>
-
-	</ul>
-
- </header>
+ <?php require('header.php'); ?>
 
  <div class="cuerpo">
-	<center>
-	<div id="card-html" style="width: 27rem; margin-top: 9%;" >
-	<div>
 
-	
-		<form action="nuevanoticia.php" method="POST" enctype="multipart/form-data">
+ 	<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+ 		 <ol class="breadcrumb">
+   			<li class="breadcrumb-item"><a href="home.php">Home</a></li>
+    		<li class="breadcrumb-item"><a href="login.html">Login</a></li>
+  		</ol>
+	</nav>
+
+
+ 		<div class="card" id="card-login" style="width: 30rem; height: 28rem;" >
+	<div class="card-body">
+		<form class="row g-3" action="comprueba_usuario.php" method="post" id="login" novalidate onsubmit="return validarFormulario();"> 
+			<div class="col-md-6">
+			<label class="form-label" style="color: white;"><b>Usuario: </b></label>
+			<input type="text" name="usuario" id="usuario" class="form-control" placeholder="Mcmartigan13@">
+			<span id="usuario_error">El usuario introducido es incorrecto</span>
+			</div>
+
+			<div class="col-md-6">
+			<label class="form-label" style="color: white;"><b>Password: </b></label>
+			<input type="password" name="password" id="password" class="form-control" placeholder="Alumn@2020">
+			<span id="password_error">La contraseña es incorrecta</span>
+			</div>
+
+			<div class="g-recaptcha" id="captcha" data-sitekey="6LfOFMYaAAAAANn5vAZ800AKZd1rPgE7-Ct8L9Xy"></div>
 			
-			<b>Titulo: </b><input type="text" name="titulo" id="titulo" class="form-control" placeholder=""><br>
-			
-			<b>Publicacion: </b><input type="text" name="publicacion" id="publicacion" class="form-control" placeholder=""><br>
-		
-			<b>Descripcion: </b><input type="text" name="descripcion" id="descripcion" class="scroll" placeholder=""><br><br>
+			<div id="error">
+                    <span style="color: red;" id="error">Faltan campos por rellenar o hay algun error</span>
+            </div>
 
-			<b>Imagen: </b><input type="file" name="imagen"><br><br>
-
-			<input type="submit" value="Añadir" name="btnregistrar">
-
+			<button type="submit" id="boton" class="btn btn-secondary">Logueate</button>
+			<button type="submit" id="bton" class="btn btn-success" ><a href="recuperar_contraseñaa.php" class="nav-link">¿Olvidaste tu contraseña?</a></button>
 		</form>
-	</center>
+	</div>
+	</div>
 
-	</div>
-	</div>
 
  </div>
 
- <footer>
+
+<footer>
  		
  		<div> 
 
@@ -147,9 +110,8 @@
 
  </footer>
 
-<script type="text/javascript" src="js/añadirusuario.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>
-

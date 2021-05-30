@@ -192,13 +192,11 @@ function validarProvincia(cpostal){
 
   function validarProvincia(){
     provincia.value = provincia.value.charAt(0).toUpperCase() + provincia.value.slice(1);
-	if(expresiones.provincia.test(provincia.value))
-	{
+	if(expresiones.provincia.test(provincia.value)){
 		campos['provincia'] = true;
 		provincia_error.style.visibility = "hidden";
 	}
-	else
-	{
+	else {
 		campos['provincia'] = false;
 		provincia_error.style.visibility = "visible";
 		document.getElementById("provincia_error").style.color = "red";
@@ -223,8 +221,7 @@ function validarProvincia(cpostal){
     if(cpostal.length == 5 && cpostal <= 52999 && cpostal >= 1000){
     	campos['comunidadautonoma'] = true;
       return cp_comunidad[parseInt(cpostal.substring(0,2))];
-    }	
-    else {
+    }else {
       campos['comunidadautonoma'] = false;
       return "----";
     }

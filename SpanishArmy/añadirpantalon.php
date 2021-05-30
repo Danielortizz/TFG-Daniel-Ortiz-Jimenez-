@@ -9,59 +9,7 @@
 	</head>
 <body background="img/fondo2.jpg">
 
- <header>
-
- <div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
-
-	<ul class="nav justify-content-center" id="barra">
-	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  		<div class="container-fluid">
-	   		<a class="navbar-brand" href="home.php">SPANISH ARMY</a>
-	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarText">
-	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">TIENDA</a>
-	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="camisetasadmin.php">CAMISETAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="pantalonesadmin.php">PANTALONES MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="botasadmin.php">BOTAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="mochilasadmin.php">MOCHILAS MILITARES</a></li>
-	    		   </ul>
-	        </li>
-
-	            <li class="nav-item">
-	        <a class="nav-link" href="ofertasadmin.php">OFERTAS</a>
-	        </li>
-	        
-	        <li class="nav-item">
-	        <a class="nav-link" href="noticiasadmin.php">NOTICIAS</a>
-	        </li>
-	        
-	        <li class="nav-item">
-	        <a class="nav-link" href="dietaadmin.php">DIETA Y ENTRENO</a>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="paneladmin.php">PANEL USUARIOS</a>
-	        </li>
-
-	        </ul>
-	    	</div>
-	        </div>
-	    </nav>
-
-	    <ul class="nav justify-content-end" id="barra">
-		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="home.php">Cerrar Sesion</a>
-		  </li>
-		</ul>
-
-	</ul>
-
- </header>
+<?php require('header.php'); ?>
 
  	<div class="cuerpo">
 	<center>

@@ -8,73 +8,7 @@
 	</head>
 	<body background="img/fondo2.jpg">
 
- <header>
-
- <div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
-
-	<ul class="nav justify-content-center" id="barra">
-	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  		<div class="container-fluid">
-	   		<a class="navbar-brand" href="home.php">SPANISH ARMY</a>
-	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarText">
-	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">TIENDA</a>
-	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="camisetas.php">CAMISETAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="pantalones.php">PANTALONES MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="botas.php">BOTAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="mochilas.php">MOCHILAS MILITARES</a></li>
-	    		   </ul>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="ofertas.php">OFERTAS</a>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="noticias.php">NOTICIAS</a>
-	        </li>
-	        <li class="nav-item">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">ACCESO A TROPA</a>
-
-	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="exclusiones.php">EXCLUSIONES</a></li>
-		      				<li><a class="dropdown-item" href="baremo.php">BAREMO 2021</a></li>
-		      				<li><a class="dropdown-item" href="cefot.php">MATERIAL CEFOT</a></li>
-		      				<li><a class="dropdown-item" href="preguntas.php">PREGUNTAS FRECUENTES</a></li>
-	    		   </ul>
-
-	        </li>
-	        <li class="nav-item">
-	        <a class="nav-link" href="dieta.php">DIETA Y ENTRENO</a>
-	        </li>
-	        </ul>
-	    	</div>
-	        </div>
-	    </nav>
-
-	    <ul class="nav justify-content-end" id="barra">
-	    	 <li class="nav-item">
-		    <a class="nav-link" aria-current="page" href="login.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
- 			<path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
-  			<path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-			</svg> Login</a>
-		  </li>
-		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="ingresar_usuario.html"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
-  			<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-  			<path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-			</svg> Registrate</a>
-		  </li>
-</ul>
-
-	</ul>
-
- </header>
+ <?php require('header.php'); ?>
 
  <div class="cuerpo">
 
@@ -111,13 +45,34 @@
 
 		  			<div class="card-body" id="jeje" style="padding: 0rem 0rem;">
 
-			    		<h5 class="card-title" id="titulocarta" style="font-size: 40px;"><u><?php echo $mostrar['Tipo de dieta']?></h5></u>
+			    		<h5 class="card-title" id="titulocarta" style="font-size: 36px; color: orange; font-family: Century Gothic;"><u><b><?php echo $mostrar['Tipo de dieta']?></b></h5></u>
 
-					   		<p class="card-text" align="center" id="jeje" style="color: white;"><u style="color: white; font-size: 30px;">ALIMENTOS: </u><br><?php echo $mostrar['Ingredientes'] ?> <u>></p>
+					   		<p class="card-text" align="center" id="jeje" style="color: red; "><u style="color: white; font-size: 20px; font-family: Baskerville;">ALIMENTOS: </u><br>
 
-					   		<p class="card-text" align="center" id="jeje" style="color: white;"><u style="font-size: 30px;">GUIA DE ENTRENAMIENTO: </u><br><?php echo $mostrar['Entrenamiento'] ?> </b></p>
+					   		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-egg" viewBox="0 0 16 16">
+  							<path d="M8 15a5 5 0 0 1-5-5c0-1.956.69-4.286 1.742-6.12.524-.913 1.112-1.658 1.704-2.164C7.044 1.206 7.572 1 8 1c.428 0 .956.206 1.554.716.592.506 1.18 1.251 1.704 2.164C12.31 5.714 13 8.044 13 10a5 5 0 0 1-5 5zm0 1a6 6 0 0 0 6-6c0-4.314-3-10-6-10S2 5.686 2 10a6 6 0 0 0 6 6z"/>
+							</svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-egg-fill" viewBox="0 0 16 16">
+  							<path d="M14 10a6 6 0 0 1-12 0C2 5.686 5 0 8 0s6 5.686 6 10z"/>
+							</svg>
 
-					   		<p class="card-text" align="center" id="jeje" style="color: white;"><u style="font-size: 30px;">PERIODO DE RECUPERACION POST EJERCICIO</u><br><?php echo $mostrar['Recuperacion post ejercicio'] ?></p>
+							<br><?php echo $mostrar['Ingredientes'] ?> <u></p>
+
+					   		<p class="card-text" align="center" id="jeje" style="color: yellow; font-family: Baskerville; "><u style="font-size: 20px; color: white;">GUIA DE ENTRENAMIENTO: </u><br><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+  							<path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+							</svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+  							<path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+							</svg>
+
+							<br><?php echo $mostrar['Entrenamiento'] ?> </b></p>
+
+					   		<p class="card-text" align="center" id="jeje" style="color: red;"><u style="font-size: 20px; font-family: Baskerville; color: white;">PERIODO DE RECUPERACIÓN POST EJERCICIO</u><br><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+  							<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
+							</svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+  							<path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z"/>
+							</svg><br>
+					   			<?php echo $mostrar['Recuperacion post ejercicio'] ?></p>
+
+					   		<p align="center" ><a href="<?php echo $mostrar['Video']; ?>" class="btn btn-light" value="Comprar" name="Comprar" ><b>VER VIDEO</b></a></p>
 		 	 		</div>	 	 				
 	</div>
 

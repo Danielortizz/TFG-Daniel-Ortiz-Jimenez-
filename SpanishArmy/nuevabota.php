@@ -10,7 +10,6 @@
 //Cogemos las variables que vamos a usar
 	$nombre = $_POST['nombre'];	
 	$precio = $_POST['precio'];
-	$talla = $_POST['talla'];
 	$descripcion = $_POST['descripcion'];
 
 
@@ -27,7 +26,7 @@
 
 
 //utilizamos la funcion para insertar una bota
-	$consulta = insertarbota($conexion, $nombre, $precio, $talla, $descripcion, $rutaimagen);
+	$consulta = insertarbota($conexion, $nombre, $precio, $descripcion, $rutaimagen);
 
 //nos lleva a la pagina de productos para un user admin
 	header('Location: botasadmin.php');

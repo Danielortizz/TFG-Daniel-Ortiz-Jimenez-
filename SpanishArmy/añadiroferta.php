@@ -7,86 +7,37 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 		<link rel="shortcut icon" href="img/logo.png">
 	</head>
-
 <body background="img/fondo2.jpg">
 
- <header>
-
- <div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
-
-	<ul class="nav justify-content-center" id="barra">
-	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  		<div class="container-fluid">
-	   		<a class="navbar-brand" href="home.php">SPANISH ARMY</a>
-	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarText">
-	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">TIENDA</a>
-	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="camisetasadmin.php">CAMISETAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="pantalonesadmin.php">PANTALONES MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="botasadmin.php">BOTAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="mochilasadmin.php">MOCHILAS MILITARES</a></li>
-	    		   </ul>
-	        </li>
-
-	            <li class="nav-item">
-	        <a class="nav-link" href="ofertasadmin.php">OFERTAS</a>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="noticiasadmin.php">NOTICIAS</a>
-	        </li>
-	        
-	        <li class="nav-item">
-	        <a class="nav-link" href="dietaadmin.php">DIETA Y ENTRENO</a>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="paneladmin.php">PANEL USUARIOS</a>
-	        </li>
-
-	        </ul>
-	    	</div>
-	        </div>
-	    </nav>
-
-	    <ul class="nav justify-content-end" id="barra">
-		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="home.php">Cerrar Sesion</a>
-		  </li>
-		</ul>
-
-	</ul>
-
- </header>
+ <?php require('header.php'); ?>
 
  <div class="cuerpo">
 
 	<center>
-	<div id="card-html" style="width: 27rem; margin-top: 9%;" >
+		<div id="card-html" style="width: 29rem; margin-top: 9%;" >
 	<div>
 
 	
-		<form action="nuevamochila.php" method="POST" enctype="multipart/form-data">
-			
-			<b>Nombre: </b><input type="text" name="nombre" id="nombre" class="form-control" placeholder=""><br>
-			
+	<form action="nuevaoferta.php" method="POST" enctype="multipart/form-data">
+		
+		<b>Nombre: </b><input type="text" name="nombre" id="nombre" class="form-control" placeholder=""><br>
+		
 
-			<b>Precio: </b><input type="text" name="precio" id="precio" class="form-control" placeholder=""><br>
-			
+		<b>Precio: </b><input type="text" name="precio" id="precio" class="form-control" placeholder=""><br><br>
+		
 
-			<b>Descripcion: </b><input type="text" name="descripcion" id="descripcion" class="scroll" placeholder=""><br><br>
-			
+		<input type="text" name="talla" id="talla" class="form-control" placeholder=""><br>
+		
 
-			<b>Imagen: </b><input type="file" name="imagen"><br><br>
+		<b>Descripcion: </b><input type="text" name="descripcion" id="descripcion" class="scroll" placeholder=""><br><br>
+		
 
-			<input type="submit" value="Añadir" name="btnregistrar">
+		<b>Imagen: </b><input type="file" name="imagen"><br><br>
 
-		</form>
+		<input type="submit" value="Añadir" name="btnregistrar">
+
+	</form>
+
 	</center>
 
 	</div>
@@ -96,7 +47,6 @@
 
  <footer>	
  		<div> 
-
  			<p class="parrafo-footer" style="margin-left: 25px;">MAPA DEL SITIO
 			<p class="parrafo-footer" style="margin-left: 25px;">
 			<a href="mapadelsitio.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: white; width: 30px; height: 30px;" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">

@@ -9,87 +9,28 @@
 	</head>
 <body background="img/fondo2.jpg">
 
- <header>
-
- <div><img src="img/header.png" class="imagen-header" width="1300" height="250"></div>
-
-	<ul class="nav justify-content-center" id="barra">
-	 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	  		<div class="container-fluid">
-	   		<a class="navbar-brand" href="home.php">SPANISH ARMY</a>
-	    	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarText">
-	        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-	        <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" aria-current="page" href="#" data-bs-toggle="dropdown"  role="button" aria-expanded="false">TIENDA</a>
-	        		<ul class="dropdown-menu">
-		      				<li><a class="dropdown-item" href="camisetasadmin.php">CAMISETAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="pantalonesadmin.php">PANTALONES MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="botasadmin.php">BOTAS MILITARES</a></li>
-		      				<li><a class="dropdown-item" href="mochilasadmin.php">MOCHILAS MILITARES</a></li>
-	    		   </ul>
-	        </li>
-
-	            <li class="nav-item">
-	        <a class="nav-link" href="ofertasadmin.php">OFERTAS</a>
-	        </li>
-	        
-	        <li class="nav-item">
-	        <a class="nav-link" href="noticiasadmin.php">NOTICIAS</a>
-	        </li>
-	        
-	        <li class="nav-item">
-	        <a class="nav-link" href="dietaadmin.php">DIETA Y ENTRENO</a>
-	        </li>
-
-	        <li class="nav-item">
-	        <a class="nav-link" href="paneladmin.php">PANEL USUARIOS</a>
-	        </li>
-
-	        </ul>
-	    	</div>
-	        </div>
-	    </nav>
-
-	    <ul class="nav justify-content-end" id="barra">
-		    <li class="nav-item">
-		    <a class="nav-link active" aria-current="page" href="home.php">Cerrar Sesion</a>
-		  </li>
-		</ul>
-
-	</ul>
-
- </header>
+<?php require('header.php'); ?>
 
  <div class="cuerpo">
 
 	<center>
-		<div id="card-html" style="width: 29rem; margin-top: 9%;" >
+
+	<div id="card-html" style="width: 35rem; margin-top: 9%; height: 40%;" >
 	<div>
 
-	
-	<form action="nuevaoferta.php" method="POST" enctype="multipart/form-data">
+		<form action="nuevacamiseta.php" method="POST" enctype="multipart/form-data" style="width: 70%" >
+			
+			<b>Nombre: </b><input type="text" name="nombre" id="nombre" class="form-control" placeholder="">
 		
-		<b>Nombre: </b><input type="text" name="nombre" id="nombre" class="form-control" placeholder=""><br>
-		
+			<b>Precio: </b><input type="text" name="precio" id="precio" class="form-control" placeholder="">
 
-		<b>Precio: </b><input type="text" name="precio" id="precio" class="form-control" placeholder=""><br><br>
-		
+			<b>Descripcion: </b><input type="text" name="descripcion" id="descripcion" class="scroll" placeholder="">
 
-		<input type="text" name="talla" id="talla" class="form-control" placeholder=""><br>
-		
+			<b>Imagen: </b><input type="file" name="imagen"><br><br>
 
-		<b>Descripcion: </b><input type="text" name="descripcion" id="descripcion" class="scroll" placeholder=""><br><br>
-		
+			<input type="submit" value="Añadir" name="btnregistrar">
 
-		<b>Imagen: </b><input type="file" name="imagen"><br><br>
-
-		<input type="submit" value="Añadir" name="btnregistrar">
-
-	</form>
-
+		</form>
 	</center>
 
 	</div>
@@ -99,6 +40,7 @@
 
  <footer>	
  		<div> 
+
  			<p class="parrafo-footer" style="margin-left: 25px;">MAPA DEL SITIO
 			<p class="parrafo-footer" style="margin-left: 25px;">
 			<a href="mapadelsitio.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: white; width: 30px; height: 30px;" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
@@ -152,7 +94,6 @@
 
  </footer>
 
-<script type="text/javascript" src="js/añadirusuario.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </body>

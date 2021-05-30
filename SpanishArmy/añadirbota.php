@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Spanish Army</title>
-	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link rel="shortcut icon" href="img/logo.png">
-</head>
-
+	<head>
+		<title>Spanish Army</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<link rel="shortcut icon" href="img/logo.png">
+	</head>
 <body background="img/fondo2.jpg">
 
- <?php require('header.php'); ?> 
+ <?php require('header.php'); ?>
 
  <div class="cuerpo">
+
+	<center>
+		<div id="card-html" style="width: 29rem; margin-top: 9%;" >
+	<div>
+
+	
+	<form action="nuevabota.php" method="POST" enctype="multipart/form-data">
 		
-		<?php  ?>
+		<b>Nombre: </b><input type="text" name="nombre" id="nombre" class="form-control" placeholder=""><br>
+		
+
+		<b>Precio: </b><input type="text" name="precio" id="precio" class="form-control" placeholder=""><br><br>
+		
+
+		<input type="text" name="talla" id="talla" class="form-control" placeholder=""><br>
+		
+
+		<b>Descripcion: </b><input type="text" name="descripcion" id="descripcion" class="scroll" placeholder=""><br><br>
+		
+
+		<b>Imagen: </b><input type="file" name="imagen"><br><br>
+
+		<input type="submit" value="Añadir" name="btnregistrar">
+
+	</form>
+
+	</center>
+
+	</div>
+	</div>
 
  </div>
 
- <footer>
- 		
+ <footer>	
  		<div> 
-
  			<p class="parrafo-footer" style="margin-left: 25px;">MAPA DEL SITIO
 			<p class="parrafo-footer" style="margin-left: 25px;">
 			<a href="mapadelsitio.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: white; width: 30px; height: 30px;" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
@@ -75,8 +100,9 @@
 
  </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/añadirusuario.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </body>
 </html>
+

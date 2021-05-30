@@ -17,7 +17,7 @@
 
 //Funcion que añade una bota
     function insertarbota($conexion, $nombre, $precio, $descripcion, $imagen){
-        $consulta = "INSERT INTO `spanisharmy`.`botas` (`Nombre`, `Precio`, `Talla`, `Descripcion`, `Imagen`) VALUES ('$nombre', '$precio', '$descripcion', '$imagen');";
+        $consulta = "INSERT INTO `spanisharmy`.`botas` (`Nombre`, `Precio`, `Descripcion`, `Imagen`) VALUES ('$nombre', '$precio', '$descripcion', '$imagen');";
         $resultado = mysqli_query($conexion, $consulta);
         return $resultado;
     }

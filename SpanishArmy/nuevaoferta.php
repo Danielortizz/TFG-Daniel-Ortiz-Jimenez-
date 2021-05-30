@@ -24,7 +24,7 @@
 	move_uploaded_file($imagen,$rutaimagen);
 
 //utilizamos la funcion para insertar una camiseta
-	$consulta = insertaroferta($conexion, $nombre, $precio, $descripcion, $imagen);
+	$consulta = insertaroferta($conexion, $nombre, $precio, $descripcion, $rutaimagen);
 
 //nos lleva a la pagina de productos para un user admin
 	header('Location: ofertasadmin.php');
