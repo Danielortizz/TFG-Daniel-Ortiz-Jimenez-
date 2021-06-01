@@ -283,6 +283,7 @@ h1{
 .item3 { grid-area: 1 / 1 / 2 / 2; }
 .item4 { grid-area: 1 / 2 / 2 / 3; }
 
+/*Estilos para el filtro de los diferentes productos*/
 .filtro{
 	background-image: url("../img/fondo23.jpg");
 	border: solid 1px black;
@@ -291,12 +292,14 @@ h1{
 	margin: auto;
 }
 
+/*Estilo para todas las imagenes de la pagina web*/
 .imagenes{
 	width: 100%;
 	height: 250px;
 	max-width: 100%;
 }
 
+/*Estilo para los comentarios de los productos que tenemos en la pagina web*/
 .comentarios{
 	background-image: url("../img/fondo23.jpg");
 	margin-left: auto;

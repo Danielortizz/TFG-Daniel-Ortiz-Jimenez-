@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Spanish Army</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<script src='https://www.google.com/recaptcha/api.js' ></script>
 	<link rel="shortcut icon" href="img/logo.png">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	
 </head>
 <body background="img/fondo2.jpg">
 
@@ -15,12 +18,11 @@
  <div class="cuerpo">
 
  	<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
- 		 <ol class="breadcrumb">
+ 		 <ol class="breadcrumb" style="background-color: orange; width: 150px; text-align: center;">
    			<li class="breadcrumb-item"><a href="home.php">Home</a></li>
     		<li class="breadcrumb-item"><a href="login.html">Login</a></li>
   		</ol>
 	</nav>
-
 
  		<div class="card" id="card-login" style="width: 30rem; height: 28rem;" >
 	<div class="card-body">
@@ -28,23 +30,31 @@
 			<div class="col-md-6">
 			<label class="form-label" style="color: white;"><b>Usuario: </b></label>
 			<input type="text" name="usuario" id="usuario" class="form-control" placeholder="Mcmartigan13@">
-			<span id="usuario_error">El usuario introducido es incorrecto</span>
+			<span id="usuario_error">El usuario introducido es incorrecto, comprueba que tiene numeros y mayúsculas</span>
 			</div>
 
 			<div class="col-md-6">
 			<label class="form-label" style="color: white;"><b>Password: </b></label>
 			<input type="password" name="password" id="password" class="form-control" placeholder="Alumn@2020">
-			<span id="password_error">La contraseña es incorrecta</span>
+			<span id="password_error">La contraseña es incorrecta, comprueba que tiene numeros, mayusculas, minusculas y signos especiales</span>
 			</div>
 
-			<div class="g-recaptcha" id="captcha" data-sitekey="6LfOFMYaAAAAANn5vAZ800AKZd1rPgE7-Ct8L9Xy"></div>
+			<div class="g-recaptcha " data-sitekey="6LduIgMbAAAAAKsBV-slEWZ6xR2RjWqQKiXHVbEu" ></div>
 			
 			<div id="error">
                     <span style="color: red;" id="error">Faltan campos por rellenar o hay algun error</span>
             </div>
 
-			<button type="submit" id="boton" class="btn btn-secondary">Logueate</button>
+			<button type="submit" id="boton" class="btn btn-secondary">Logueate</button> 
+
+			<?php 
+				
+				if(isset($_GET['captcha']) && $_GET['captcha'] == "novalido"){ echo "<script>swal('Verifica el CAPTCHA!!', '', 'error')</script>";}
+
+			?> 
+
 			<button type="submit" id="bton" class="btn btn-success" ><a href="recuperar_contraseñaa.php" class="nav-link">¿Olvidaste tu contraseña?</a></button>
+			
 		</form>
 	</div>
 	</div>

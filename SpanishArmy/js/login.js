@@ -8,11 +8,13 @@
 	$("#password_error").css("visibility", "hidden");
 	$("#error").css("visibility", "hidden");
 
+//Expresiones regulares usadas para esta validacion
 const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, 
 	password: /^(?=.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$/
 }
 
+//Dejamos por defecto los cmapos en falso para poder tener un cotnrol de errores
 const campos = {
 	usuario: false,
 	password: false

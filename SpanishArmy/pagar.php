@@ -1,85 +1,80 @@
 <?php
 
-//Cogemos los archivos que vamos a usar
+/*Creamos una sesion o reanudamos la sesion que teniamos*/
 
-    require 'bd/conectorBD.php';
-    require 'DAOusuarios.php';
-    require 'DAOpantalones.php';
+session_start();
 
-//Iniciamos la sesion
+$total=$_GET['total'];
 
-	session_start();
-
-	$rol = $_SESSION['Rol'];
-  
-  //Nos conectamos a la base de datos
-
-    $conexion = conectar(true);
-
-//Guardamos en una variable la funcion que vamos a usar mas tarde, en este caso para coger el precio de un pantalon
- 
-    $precio = cogerpreciopantalon($conexion,$precio);
 ?>
-<!DOCTYPE html>
+
 <html>
-    <head>
-        <title>Spanish Army</title>
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel="shortcut icon" href="img/logo.png">
-    </head>
-	<body  background="img/fondo2.jpg">
-  
- <?php require('header.php'); ?>
+    
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpanishArmy</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/logo.png">
+    <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-a11y="true"></script>
+    
+</head>
 
-    <div class="cuerpo">
+<body background="img/fondo2.jpg">
+    
+    <?php require('header.php'); ?>
 
-				<div class="filtro">
-                  <a style="color: white;" href="pantalones.php">Todos los pantalones</a><br>
+ <div class="cuerpo" align="center" style="margin-top: 12%; margin-bottom: 2%; ">
 
-						<?php
+        <div class="container">
+        <!-- Set up a container element for the button -->
+            <div id="paypal-button-container" class="pagpagar"></div>
 
-						  while ($fila = mysqli_fetch_assoc($precio)){
+                <!-- Include the PayPal JavaScript SDK -->
+               <script src="https://www.paypal.com/sdk/js?client-id=test&currency=EUR"></script>
 
-						?>
+            <script >
 
-						<a class="consolaFiltro"  style="color: white;" href="filtroPantalones.php?Precio=<?php echo $fila['Precio']?>"><?php echo $fila['Precio'] ?></a><br
-                        >
+                // Render the PayPal button into #paypal-button-container
+                   paypal.Buttons({
 
-						<?php
+                // Set up the transaction
+                    createOrder: function(data, actions) {
+                      return actions.order.create({
+                       purchase_units: [{
+                        amount: {
 
-						}
+                            value: '<?php echo $total ?>'
 
-						?>
-				</div>
-				<div>
-          <div class="row">
-					<?php
-                        $precio = $_GET['Precio'];
-                        $filtro = filtropantalonprecio($conexion,$precio);
-						while ($fila = mysqli_fetch_assoc($filtro)) {?>
-							<div class="card" id="carta-catalogog" style="width: 18rem;">
-                                     <img src="<?php echo $fila['Imagen'] ?>" id="ñao" class="imagenes">
-                                     <div class="card-body" style="padding: 0rem 0rem;">
-                                     <h5 class="card-title" id="titulocarta"><b><?php echo $fila['Nombre'] ?></h5></b>
-                                     <p class="card-text" align="center" id="descripcioncarta"><b> <?php echo $fila['Descripcion'] ?> </b></p>
-                                     <p align="center" ><a href="detallespantalones.php?idpantalones=<?php echo $fila['idpantalones']; ?>" class="btn btn-dark" >COMPRAR</a></p>
-                                     <p class="card-text" align="center" id="preciocarta"><b><?php echo $fila['Precio'] ?> </b></p>
-                            </div>
-                            
-                        </div>
 
-						  <?php
-						      }
-					       ?>
-				</div>
-			</div>
-</div>
+                              }
+                          }]
+                         });
+                     },
 
-</div>
+                // Finalize the transaction
+                  onApprove: function(data, actions) {
+                   return actions.order.capture().then(function(details) {
+                    window.location="VaciarCarritoPaypal.php";
 
-        <footer>        
+                  });
+                  }
+
+                  }).render('#paypal-button-container');
+              </script>
+
+            </div>
+        </div>
+
+</body>
+
+<footer>
+        
         <div> 
+
             <p class="parrafo-footer" style="margin-left: 25px;">MAPA DEL SITIO
             <p class="parrafo-footer" style="margin-left: 25px;">
             <a href="mapadelsitio.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: white; width: 30px; height: 30px;" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
@@ -125,13 +120,17 @@
                       </li>
                     </ul>   
                 </div>
+
             <hr>
             <h5 style="color: white;" >© 2021 Spanish Army - Todos los Derechos Reservados</h5>
     </div>
 
  </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-</body>	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+
 </html>

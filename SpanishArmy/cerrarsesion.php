@@ -1,9 +1,15 @@
 <?php 
 
-session_start();
+//Iniciamos una sesion
+	
+	session_start();
 
-session_destroy();
+//La destruimos
+	
+	session_destroy();
 
-header('Location: home.php');
+//Y nos reedirigimos a la pagina principal
+	
+	header('Location: home.php');
 
 ?>

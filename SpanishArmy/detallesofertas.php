@@ -1,18 +1,22 @@
 <?php
 
 //Iniciamos la sesion
+
 	session_start();
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Spanish Army</title>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="shortcut icon" href="img/logo.png">
+	
 </head>
 
 <body background="img/fondo2.jpg">

@@ -41,6 +41,7 @@ const expresiones = {
 	dni: /^[0-9]{8}[A-Za-z]$/
 }
 
+/*Funciones para validar el usuario  y para gestionar el control de errores*/
 const campos = {
 	usuario: false,
 	password: false,
@@ -151,21 +152,8 @@ function validarCp(){
 	}	
 }
 
-
-/*Funciones para validar la provincia y para gestionar el control de errores*/
-function validarP(){
-	if(expresiones.provincia.test(provincia.value)){
-		campos['provincia'] = true;
-		document.getElementById('provincia_error').style.visibility = "hidden";
-	}else{
-		campos['provincia'] = false;
-		document.getElementById('provincia_error').style.visibility = "visible";
-		document.getElementById('provincia_error').style.color = "red";
-	}	
-}
-
 /*Valida la provincia con el codigo postal*/
-function validarProvincia(cpostal){
+function validarProvinciaa(cpostal){
     let cp_provincias = {
       1: "\u00C1lava", 2: "Albacete", 3: "Alicante", 4: "Almer\u00EDa", 5: "\u00C1vila",
       6: "Badajoz", 7: "Baleares", 8: "Barcelona", 9: "Burgos", 10: "C\u00E1ceres",
@@ -190,7 +178,7 @@ function validarProvincia(cpostal){
     
   }
 
-  function validarProvincia(){
+    function validarProvincia(){
     provincia.value = provincia.value.charAt(0).toUpperCase() + provincia.value.slice(1);
 	if(expresiones.provincia.test(provincia.value)){
 		campos['provincia'] = true;
@@ -202,7 +190,9 @@ function validarProvincia(cpostal){
 		document.getElementById("provincia_error").style.color = "red";
 	}
 }
+
   
+
   //Valida la comunidad dandole el codigo postal
   function validarComunidad(cpostal){
     let cp_comunidad = {
@@ -230,7 +220,7 @@ function validarProvincia(cpostal){
   
   cp.onkeyup = function(){
     comunidadautonoma.value = validarComunidad(cp.value);
-	provincia.value = validarProvincia(cp.value);
+	provincia.value = validarProvinciaa(cp.value);
   }
 
 
@@ -275,6 +265,7 @@ function validarDni() {
      }
   }
 
+//Funcion para validar todos los formularios y que no se puedan enviar si no esta correctamente escrito todos los campos del formulario
   function validarFormulario()
 {
 	let register = document.register;	
@@ -328,6 +319,8 @@ cp.addEventListener("keyup", validarProvincia);
 cp.addEventListener("blur", validarProvincia);
 comunidadautonoma.addEventListener("keyup", validarComunidadAutonoma);
 comunidadautonoma.addEventListener("blur", validarComunidadAutonoma);
+cp.addEventListener("keyup", validarComunidadAutonoma);
+cp.addEventListener("blur", validarComunidadAutonoma);
 dni.addEventListener("keyup", validarDni);
 dni.addEventListener("blur", validarDni);
 

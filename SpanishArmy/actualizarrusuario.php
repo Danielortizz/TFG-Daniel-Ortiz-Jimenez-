@@ -33,6 +33,7 @@
 
 	<center>
 		<div class="card" id="card-login-grande" style="width: 18rem;">
+			
 		<div>	
 
 	<form action="modificarrusuario.php" method="POST" enctype="multipart/form-data">
@@ -72,7 +73,7 @@
 
 		<input type="submit" value="Actualizar" name="btnregistrar"><br>
 
-	</form>	
+		</form>	
 	</center>
 
 	</div>

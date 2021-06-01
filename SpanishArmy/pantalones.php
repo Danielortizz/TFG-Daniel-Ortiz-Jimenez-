@@ -1,11 +1,13 @@
 <?php 
 
 //Cogemos los archivos que vamos a necesitar
+
 	require 'bd/conectorBD.php';
 	require 'DAOusuarios.php';
 	require 'DAOpantalones.php';
 
 //Nos conectamos a la base de datos
+
 	$conexion = conectar(true);
 	$precio = cogerpreciopantalon($conexion,$precio);
 
@@ -13,10 +15,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Spanish Army</title>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<link rel="shortcut icon" href="img/logo.png">
+	
 </head>
 <body background="img/fondo2.jpg">
 
@@ -25,7 +29,7 @@
  <div class="cuerpo">
 
  	<nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='currentColor'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
- 		 <ol class="breadcrumb">
+ 		 <ol class="breadcrumb" style="background-color: orange; width: 250px; text-align: center;">
    			<li class="breadcrumb-item"><a href="home.php">Home</a></li>
    			<li class="breadcrumb-item">Tienda</li>
     		<li class="breadcrumb-item"><a href="pantalones.php">Pantalones</a></li>
@@ -57,9 +61,11 @@
 	<?php 
 
 //usamos una funcion que nos permite mostrar las pantalones de la base de datos
+
 	$result = mostrarpantalones($conexion);
 
 //recorre la consulta y los muestra
+
 	while ($mostrar=mysqli_fetch_array($result)) {
 
 	?>

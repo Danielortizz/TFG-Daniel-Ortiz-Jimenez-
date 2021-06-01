@@ -1,6 +1,7 @@
 <?php 
 
 //iniciamos la sesion
+
 session_start();
 
 ?>
@@ -23,24 +24,51 @@ session_start();
 	<table class="table table-striped table-dark">
 		<div id="margen-tablas">
 		<tr id="tr">
-			<th id="td" scope="col" >Nombre de Usuario</th>
-			<th id="td" scope="col" >Password</th>
-			<th id="td" scope="col" >Nombre</th>
-			<th id="td" scope="col" >Apellido 1</th>
-			<th id="td" scope="col" >Apellido 2</th>
-			<th id="td" scope="col" >Telefono</th>
-			<th id="td" scope="col" >Email</th>
-			<th id="td" scope="col" >CP</th>
-			<th id="td" scope="col" >Provincia</th>
-			<th id="td" scope="col" >Comunidad Autonoma</th>
-			<th id="td" scope="col" >Rol</th>
-			<th id="td" scope="col" >Dni</th>
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Nombre de Usuario</th><br>
 
-			<th id="td" scope="col" >Modificar</th>
-			<th id="td" scope="col" >Dar de baja</th>
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Password</th>
+
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Nombre</th>
+
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Apellido 1</th>
+
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Apellido 2</th>
+
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Telefono</th>
+
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Email</th>
+
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">CP</th>
+
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Provincia</th>
+
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Comunidad Autonoma</th>
+
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Rol</th>
+
+			<th id="td" scope="col" style="color: red; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Dni</th>
+
+			<th id="td" scope="col" style="color: yellow; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Modificar</th>
+
+			<th id="td" scope="col" style="color: yellow; -webkit-text-stroke-width: 1px;
+	   		-webkit-text-stroke-color: black;">Dar de baja</th>
+
 		</tr>
 
-		<tr>
+		<tr style="margin-top: 2%;">
 			<td><b> <?php echo $_SESSION['Usuario']?> </b></td>
 			<td><b> <?php echo $_SESSION['Password']?> </b></td>
 			<td><b> <?php echo $_SESSION['Nombre']?> </b></td>

@@ -1,3 +1,12 @@
+<?php 
+
+if(!isset($_SERVER['HTTP_REFERER'])){
+        header("Location: home.php");
+        exit;
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -80,7 +89,7 @@
 
 		</div>
 
-		<div align="center" class="cuadro">
+	<div align="center" class="cuadro">
 
 		<h1><FONT FACE="Impact" class="titulocarrusel" >PREGUNTAS FRECUENTES</FONT></h1>
 

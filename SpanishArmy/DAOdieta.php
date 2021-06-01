@@ -1,6 +1,7 @@
 <?php  
 
 //Funcion para mostrar dietas
+
     function mostrardieta($conexion){
             $consulta = "SELECT * FROM `dieta`";
             $resultado = mysqli_query($conexion, $consulta);
@@ -8,6 +9,7 @@
     }
 
 //Funcion para borrar dieta
+
     function borrardieta($conexion,$iddieta){
             $consulta = "DELETE FROM `spanisharmy`.`dieta` WHERE (`iddieta` = '$iddieta')";
             $resultado = mysqli_query($conexion, $consulta);
@@ -15,6 +17,7 @@
     }
 
 //Funcion para mostrar dieta por id 
+
     function enseñardietaporid($conexion,$iddieta){
             $consulta = "SELECT * FROM `dieta` WHERE (`iddieta` = '$iddieta')";
             $resultado = mysqli_query($conexion, $consulta);
@@ -22,6 +25,7 @@
     }
 
 //Funcion que modifica la dieta
+    
     function modificardieta($conexion,$tipodedieta,$ingredientes,$entrenamiento,$recuperacion,$iddieta,$imagen){
         $consulta = "UPDATE `spanisharmy`.`dieta` SET `Tipo de dieta` = '$tipodedieta', `Ingredientes` = '$ingredientes', `Entrenamiento` = '$entrenamiento', `Recuperacion post ejercicio` = '$recuperacion', `Imagen` = '$imagen' WHERE (`iddieta` = '$iddieta')";
         $resultado = mysqli_query($conexion, $consulta);

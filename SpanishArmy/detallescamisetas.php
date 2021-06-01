@@ -1,18 +1,22 @@
 <?php
 
 //Iniciamos la sesion
+
 	session_start();
+
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Spanish Army</title>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="shortcut icon" href="img/logo.png">
+
 </head>
 
 <body background="img/fondo2.jpg">
@@ -24,18 +28,21 @@
 	<?php 
 
 //Cogemos los archivos que vamos a necesitar
+
 	require 'bd/conectorBD.php';
 	require 'DAOusuarios.php';
 	require 'DAOcamisetas.php';
 
 //Nos conectamos a la base de datos
+
 	$conexion = conectar(true);
 
 	$idcamisetas = $_GET['idcamisetas'];
 	$idUsuario =  $_SESSION['idUsuario'];
+	$rol = $_SESSION["Rol"];
 
-	
 //usamos una funcion que nos permite mostrar las consolas de la base de datos
+	
 	$result = enseñarcamisetaporid($conexion,$idcamisetas);
 
 //recorre la consulta y los muestra
@@ -51,6 +58,7 @@
 			    		<h5 class="card-title" text-align="center" id="titulocarta"><b> <?php echo $mostrar['Nombre'] ?> </b></h5>
 					   		<p class="card-text" align="center" id="preciocarta">Precio: <b> <?php echo $mostrar['Precio'] ?> </b></p>
 					   		<p class="card-text" align="center" id="descripcioncarta"><b> <?php echo $mostrar['Descripcion'] ?> </b></p>
+					   		<p align="center" ><a style="color: black; align-content: center;" class="btn btn-light" href="insertarCamisetacarrito.php?idcamisetas=<?php echo $mostrar['idcamisetas']; ?>" value="Comprar" name="Comprar"><b>AÑADIR AL CARRITO</b></a></p>
 					   		<ul class="nav justify-content-end">
 							</ul>
 					   		
@@ -66,15 +74,31 @@
 	
 </div>
 
-	<div class="comentarios">
-		<h2 style="background: black; color: white;">COMENTANOS: </h2>
+
+	<?php
+	if(($rol == "admin") || ($rol == "usuario")){
+
+		echo' <div class="comentarios">
+		<h2 style="background: black; color: white; text-align: center;">COMENTANOS: </h2>
 		<textarea name="coments" id="coments" style="width: 100%;">
 		</textarea>
-			<button class="botoncoments" name="coments" id="coments" data-Producto="<?php echo $idcamisetas; ?>" data-idUsuario="<?php echo $idUsuario; ?> " style="width: 100%;">Enviar</button>
-	</div>
+			<button class="botoncoments" name="coments" id="coments" data-Producto="'.$idcamisetas.'" data-idUsuario="'.$idUsuario.'" style="width: 100%;">Enviar</button>
+		</div>';
+
+	} else {
+
+		echo' <div class="comentarios">
+		<h2 style="background: black; color: white; text-align: center; display: none;">COMENTANOS: </h2>
+		<textarea name="coments" id="coments" style="width: 100%; display: none;">
+		</textarea>
+			<button class="botoncoments" name="coments" id="coments" data-Producto="'.$idcamisetas.'" data-idUsuario="'.$idUsuario.'" style="width: 100%; display: none;">Enviar</button>
+		</div>';
+	}
+
+	?>
 
 	<div class="comentarios">
-			<h2 style="background: black; color: white;">COMENTARIOS:</h2>
+			<h2 style="background: black; color: white; text-align: center;">COMENTARIOS: </h2>
 			<div id="mostrarComentario" style="color: white; text-align: center; font-size: 20px;"></div>
 	</div>
 

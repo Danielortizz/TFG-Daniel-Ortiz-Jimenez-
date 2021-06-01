@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Spanish Army</title>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="shortcut icon" href="img/logo.png">
+	
 </head>
 
 <body background="img/fondo2.jpg">
@@ -35,11 +37,11 @@
 
 	<p align="center"><FONT FACE="Impact" size="500px" class="mapadelsitio" >USUARIO</FONT></p>
 
-		<a href="login.html"><p align="center"><FONT FACE="Impact" size="50px" class="mapadelsitio" style="color: black;" >LOGIN</FONT></p></a>
+		<a href="login.php"><p align="center"><FONT FACE="Impact" size="50px" class="mapadelsitio" style="color: black;" >LOGIN</FONT></p></a>
 
-		<a href="ingresar_usuario.html"><p align="center"><FONT FACE="Impact" size="50px" class="mapadelsitio" style="color: black;" >REGISTRO</FONT></p></a>
+		<a href="ingresar_usuarioo.php"><p align="center"><FONT FACE="Impact" size="50px" class="mapadelsitio" style="color: black;" >REGISTRO</FONT></p></a>
 
-		<a href="recuperar_contraseña.html"><p align="center"><FONT FACE="Impact" size="50px" class="mapadelsitio" style="color: black;" >RECUPERAR CONTRASEÑA</FONT></p></a>
+		<a href="recuperar_contraseñaa.php"><p align="center"><FONT FACE="Impact" size="50px" class="mapadelsitio" style="color: black;" >RECUPERAR CONTRASEÑA</FONT></p></a>
 
 </div>
 

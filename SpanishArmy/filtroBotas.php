@@ -1,13 +1,23 @@
 <?php
+
+//Cogemos los archivos que vamos a usar
+
     require 'bd/conectorBD.php';
     require 'DAOusuarios.php';
     require 'DAObotas.php';
+
+//Iniciamos la sesion
 
 	session_start();
 
 	$rol = $_SESSION['Rol'];
 
+//Nos conectamos a la base de datos
+
     $conexion = conectar(true);
+
+//Guardamos en una variable la funcion que vamos a usar mas tarde, en este caso para coger el precio de una bota   
+ 
     $precio = cogerpreciobota($conexion,$precio);
 ?>
 <!DOCTYPE html>

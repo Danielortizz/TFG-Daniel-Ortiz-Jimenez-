@@ -38,17 +38,21 @@
 	<?php 
 
 //Cogemos los archivos que vamos a necesitar
+
 	require 'bd/conectorBD.php';
 	require 'DAOusuarios.php';
 	require 'DAOofertas.php';
 
 //Nos conectamos a la base de datos
+
 	$conexion = conectar(true);
 
 //usamos una funcion que nos permite mostrar las ofertas de la base de datos
+
 	$result = mostrarofertas($conexion);
 
 //recorre la consulta y los muestra
+	
 	while ($fila=mysqli_fetch_array($result)) {
 
 	?>

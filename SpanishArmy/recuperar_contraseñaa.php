@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Spanish Army</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<link rel="shortcut icon" href="img/logo.png">
+	
 </head>
 <body background="img/fondo2.jpg">
 
@@ -13,19 +15,18 @@
 
 <div class="cuerpo">
 
-	<div id="card-login" style="width: 18rem;">
+	<div id="card-login" style="width: 18rem; margin-top: 12%;">
 		<div class="card-body" id="card-html">
 		<center>
 		<form action="recuperar_contraseña.php" method="post">
 			
-			<div><h2>Recuperacion de contraseña</div></h2>
+			<div><h2>Recuperación de contraseña</div></h2><br>
 			
 			<label><b>Introduce el Dni de su cuenta: </b></label>
-			<input type="text" name="dni" id="dni"  class="form-control" placeholder="Ejemplo: 45324578L">
-			<span id="dni_error">El Dni introducido no es correcto</span>
 
-			<input class="boton" type="submit">
+			<input type="text" name="dni" id="dni"  class="form-control" placeholder="Ejemplo: 45324578L"><br>
 			
+			<input class="boton" type="submit">
 		</form>
 		</center>
 		</div>

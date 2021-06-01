@@ -1,13 +1,16 @@
 <?php 
 
 //Cargamos los archivos que vamos a usar
+
 require 'bd/conectorBD.php';
 require 'DAOusuarios.php';
 
 //Usamos las variables que vamos a coger
+
  $dni = $_POST['dni'];
 
 //Nos conectamos a la base de datos y hacemos una consulta
+ 
   $conexion = conectar(true);
   $consulta = recuperar($conexion, $dni);
 
@@ -24,7 +27,7 @@ require 'DAOusuarios.php';
         
     } else{
     	
-        header('Location: login.html');
+        header('Location: login.php');
     }
 
 

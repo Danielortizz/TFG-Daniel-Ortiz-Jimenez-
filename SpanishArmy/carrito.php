@@ -1,85 +1,96 @@
-<?php
-
-//Cogemos los archivos que vamos a usar
-
-    require 'bd/conectorBD.php';
-    require 'DAOusuarios.php';
-    require 'DAOpantalones.php';
-
-//Iniciamos la sesion
-
-	session_start();
-
-	$rol = $_SESSION['Rol'];
-  
-  //Nos conectamos a la base de datos
-
-    $conexion = conectar(true);
-
-//Guardamos en una variable la funcion que vamos a usar mas tarde, en este caso para coger el precio de un pantalon
- 
-    $precio = cogerpreciopantalon($conexion,$precio);
-?>
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Spanish Army</title>
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel="shortcut icon" href="img/logo.png">
-    </head>
-	<body  background="img/fondo2.jpg">
-  
- <?php require('header.php'); ?>
+<html lang="en">
+<head>
 
-    <div class="cuerpo">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpanishArmy</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="shortcut icon" href="img/logo.png">
+    <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-a11y="true"></script>
+    
+</head>
 
-				<div class="filtro">
-                  <a style="color: white;" href="pantalones.php">Todos los pantalones</a><br>
+<body background="img/fondo2.jpg">
+    
+    <?php require('header.php'); ?>
 
-						<?php
+ <div class="cuerpo">
 
-						  while ($fila = mysqli_fetch_assoc($precio)){
+		<div class="contenedor">
+		
+        <div class="table-responsive">
+            <table class="table table-striped table-dark">
+                <thead class="table table-striped table-dark">
+                    
+                    <tr>
+                    <th scope="col">Nombre Producto</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Herramientas</th>
 
-						?>
+                    </tr>
+                </thead>
+                <?php
 
-						<a class="consolaFiltro"  style="color: white;" href="filtroPantalones.php?Precio=<?php echo $fila['Precio']?>"><?php echo $fila['Precio'] ?></a><br
-                        >
+                //Cogemos los archivos que vamos a necesitar
+                    require 'bd/conectorBD.php';
+                    require 'DAOusuarios.php';
 
-						<?php
+                //Nos conectamos a la base de datos
+                    $conexion = conectar(true);
 
-						}
+                //Iniciamos la sesion
+                    session_start();
 
-						?>
-				</div>
-				<div>
-          <div class="row">
-					<?php
-                        $precio = $_GET['Precio'];
-                        $filtro = filtropantalonprecio($conexion,$precio);
-						while ($fila = mysqli_fetch_assoc($filtro)) {?>
-							<div class="card" id="carta-catalogog" style="width: 18rem;">
-                                     <img src="<?php echo $fila['Imagen'] ?>" id="ñao" class="imagenes">
-                                     <div class="card-body" style="padding: 0rem 0rem;">
-                                     <h5 class="card-title" id="titulocarta"><b><?php echo $fila['Nombre'] ?></h5></b>
-                                     <p class="card-text" align="center" id="descripcioncarta"><b> <?php echo $fila['Descripcion'] ?> </b></p>
-                                     <p align="center" ><a href="detallespantalones.php?idpantalones=<?php echo $fila['idpantalones']; ?>" class="btn btn-dark" >COMPRAR</a></p>
-                                     <p class="card-text" align="center" id="preciocarta"><b><?php echo $fila['Precio'] ?> </b></p>
-                            </div>
-                            
-                        </div>
+                    $idcesta = $_SESSION['idUsuario'];
+                    $buscarproductoscarrito=verCarrito($conexion, $idcesta);
 
-						  <?php
-						      }
-					       ?>
-				</div>
-			</div>
-</div>
+                ?>
+                <tbody class="table table-striped table-dark">
+                <?php
+                while($productoscarrito=mysqli_fetch_assoc($buscarproductoscarrito)){
 
-</div>
+                ?>
+                    <tr>
+                        <th class="text-left"><?php echo $productoscarrito['nombreProducto'] ; ?></th>
 
-        <footer>        
+                        <td><a href="sumarcantidad.php?idProductoCarrito= <?php  echo $productoscarrito['iditem'];?>" style="text-decoration:none;"><i class="fas fa-plus text-dark"></i></a>&nbsp;<?php echo $productoscarrito['Cantidad'] ; ?>&nbsp;<a href="restarcantidad.php?idProductoCarrito= <?php  echo $productoscarrito['iditem'];?>" style="text-decoration:none;"><i class="fas fa-minus text-dark"></i></a></td>
+
+                        <td><?php echo $productoscarrito['PrecioItem'] ; ?></td>
+
+                        <td style="display:flex; justify-content:center; align-items:center; padding:2%;"><a style="display:flex; justify-content:center; align-items:center; padding:2%;" class="btn btn-danger btn-lg" href="eliminarProductoCarrito.php?idProductoCarrito= <?php  echo $productoscarrito['iditem'];?>" value="eliminar" name="eliminar" onclick="return ConfirmarEliminar()">Eliminar</a></td>
+
+                    </tr>
+                <?php
+
+                }
+                
+                ?>
+
+                <tr class="table table-striped table-dark">
+                    <?php $consulta= mysqli_fetch_assoc(precioTotal($conexion, $idcesta));?>
+                   <td><a class="btn btn-success col-md-8 " href="pagar.php?total=<?php echo $consulta['sum(PrecioItem * Cantidad)'] ; ?>">Pagar</a></td>
+                    <td class="text-light" style="font-size:2rem;"><strong>Precio Total:</strong></td>
+                    <td class="text-light" style="font-size:2rem;"><?php echo $consulta['sum(PrecioItem * Cantidad)'] ; ?>€</td>
+                    <td><a class="btn btn-warning col-md-12 " href="borrarCarrito.php" style="background-color: yellow;">Vaciar carrito</a></td>
+
+                </tr>
+                </tbody>
+             </table>
+        </div>
+        
+        
+    </div>
+			
+	</div>						
+						
+<footer>
+        
         <div> 
+
             <p class="parrafo-footer" style="margin-left: 25px;">MAPA DEL SITIO
             <p class="parrafo-footer" style="margin-left: 25px;">
             <a href="mapadelsitio.php"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color: white; width: 30px; height: 30px;" fill="currentColor" class="bi bi-easel-fill" viewBox="0 0 16 16">
@@ -125,13 +136,16 @@
                       </li>
                     </ul>   
                 </div>
+
             <hr>
             <h5 style="color: white;" >© 2021 Spanish Army - Todos los Derechos Reservados</h5>
     </div>
 
  </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-</body>	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
 </html>

@@ -1,17 +1,19 @@
 <?php 
 
-$dni = $_GET['dni'];
+	$dni = $_GET['dni'];
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<title>Spanish Army</title>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 	<link rel="shortcut icon" href="img/logo.png">
+	
 </head>
 <body background="img/fondo2.jpg">
 	

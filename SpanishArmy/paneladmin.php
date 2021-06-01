@@ -1,10 +1,22 @@
 <?php 
 
+if(!isset($_SERVER['HTTP_REFERER'])){
+        header("Location: home.php");
+        exit;
+    }
+
+?>
+
+
+<?php 
+
 //Cogemos los archivos que vamos a necesitar
+
     require 'bd/conectorBD.php';
 	require 'DAOusuarios.php';
 
 //inicimaos la session
+
     session_start();
 
 ?>
@@ -59,12 +71,15 @@
 			<?php  
 
 			//Nos conectamos a la base de datos
+
 				 $conexion = conectar(true);
 
 			//usamos la funcion para coger los usuarios de nuestra base de datos
+
 				 $result = obtenerUsuarios($conexion);
 
 				 //recorremos la consulta
+				 
 				 while ($fila = mysqli_fetch_assoc($result)) {?>
 
 				 	<tr>
