@@ -18,8 +18,8 @@
 
 //Funcion para modificar el usuario, le damos los parametros para conectarnos a la BD, la contraseña y el id del usuario que vamos a cambiar
 
-    function modificarUsuarios($conexion, $password, $dni){
-        $consulta = "UPDATE usuario SET `Password` = '$password' WHERE (`Dni` = '$dni')";
+    function modificarUsuarios($conexion, $password, $usuario){
+        $consulta = "UPDATE usuario SET `Password` = '$password' WHERE (`Usuario` = '$usuario')";
         $resultado = mysqli_query($conexion, $consulta);
         return $resultado;
     }
@@ -46,7 +46,7 @@
 
 //Funcion que nos ayuda a recuperar la contraseña dandole el dni
 
-    function recuperar($conexion, $email){
+    function recuperarEmail($conexion, $email){
          $consulta = "SELECT * FROM usuario WHERE Email = '$email' ";
          $resultado = mysqli_query($conexion, $consulta);
          return $resultado;

@@ -15,16 +15,26 @@
 
 <div class="cuerpo">
 
-	<div id="card-login" style="width: 18rem; margin-top: 12%;">
-		<div class="card-body" id="card-html">
+	<div>
+		<div class="card-body" id="card-html" style="width: 20rem; margin-top: 15%; text-align: center;">
 		<center>
 		<form action="recuperar_contraseña.php" method="post">
+
+						<p>
+                            <?php
+                                if(isset($_GET['error']) && $_GET['error'] == "emailnoexiste") {
+                                    echo '<h4>El email introducido no existe.</h4>';
+                                }
+                            ?>
+                        </p>
 			
 			<div><h2>Recuperación de contraseña</div></h2><br>
-			
-			<label><b>Introduce el Dni de su cuenta: </b></label>
 
-			<input type="text" name="dni" id="dni"  class="form-control" placeholder="Ejemplo: 45324578L"><br>
+
+			
+			<label><b>Introduce el correo de su cuenta: </b></label>
+
+			<input type="text" name="email" id="email"  class="form-control" placeholder="Ejemplo: anonimo@gmail.com"><br>
 			
 			<input class="boton" type="submit">
 		</form>

@@ -22,7 +22,7 @@
 			<b>Usuario: </b><input type="text" name="usuario" id="usuario" class="form-control" placeholder="Ejemplo: Alumno23">
 			<span id="usuario_error">El usuario introducido no es valido</span><br>
 
-			<b>Password: </b><input type="text" name="password" id="password" class="form-control" placeholder="Ejemplo: Alumn@2020">
+			<b>Password: </b><input type="password" name="password" id="password" class="form-control" placeholder="Ejemplo: Alumn@2020">
 			<span id="password_error">La contraseña introducida no es valida</span><br>
 
 			<b>Nombre: </b><input type="text" name="nombre" id="nombre" class="form-control" placeholder="Ejemplo: Daniel">

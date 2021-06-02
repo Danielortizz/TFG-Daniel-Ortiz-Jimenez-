@@ -11,18 +11,19 @@
 
 //cogemos el valor que hemos metido en el campo del dni
 
-	$dni = $_POST['dni'];
+	$usuario = $_POST['usuario'];
 
 //cogemos el valor que hemos metido en el campo de la nueva contraseña
 	
-	$contraseñaN = $_POST['password'];
+	$password = $_POST['password'];
 
 //Uso de funciones
 
-	modificarUsuarios($conexion, $contraseñaN, $dni);
+	modificarUsuarios($conexion, $password, $usuario);
+
 
 //Nos lleva al a pagina para loguearnos
 
-	header('Location: login.html');
+	header('Location: login.php');
 
 ?>

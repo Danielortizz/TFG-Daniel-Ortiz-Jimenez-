@@ -1,7 +1,15 @@
 <?php 
 
-	$dni = $_GET['dni'];
+//Cargamos los archivos que vamos a usar
 
+	require 'bd/conectorBD.php';
+	require 'DAOusuarios.php';
+
+//Nos conectamos a la base de datos 
+
+	$conexion = conectar(true);
+
+	session_start();
 ?>
 
 <!DOCTYPE html>
@@ -30,11 +38,12 @@
 		<div><h2>Cambio de contraseña</div></h2>
 
 		<label><b>Contraseña nueva:</b></label>
+
 		<input type="text" name="password" id="password" class="form-control" placeholder="Ejemplo: Alumn@2020">
-		<span id="password_error">La contraseña introducida no es valida</span>
+
 	    <input type="submit" class="boton">
 
-	    <input type="hidden" name="dni" value="<?php echo $dni ?>">
+	    <input type="hidden" name="usuario" value="<?php echo $_GET['usuario'];?>">
 	    
 	</form>
 	

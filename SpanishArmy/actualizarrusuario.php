@@ -32,43 +32,43 @@
 <div class="cuerpo">
 
 	<center>
-		<div class="card" id="card-login-grande" style="width: 18rem;">
+		<div class="card" id="card-login" style="width: 30rem; height: 30%; margin-bottom: 9%; text-align: left;">
 			
 		<div>	
 
 	<form action="modificarrusuario.php" method="POST" enctype="multipart/form-data">
-			
-		<b>Usuario: </b><input type="text" name="usuario" id="usuario" class="form-control" placeholder="Alumno23" value="<?php echo $fila['Usuario'] ?>"><br>
+		
+		<b style="color: white;">Usuario: </b><input type="text" name="usuario" id="usuario" class="form-control" placeholder="Alumno23" value="<?php echo $fila['Usuario'] ?>"><br>
 		<span id="usuario_error">El usuario introducido no es valido</span>
 
-		<b>Password: </b><input type="text" name="password" id="password" class="form-control" placeholder="Alumn@2020" value="<?php echo $fila['Password'] ?>"><br>
+		<b style="color: white;">Password: </b><input type="password" name="password" id="password" class="form-control" placeholder="Alumn@2020" value="<?php echo $fila['Password'] ?>"><br>
 		<span id="password_error">La contraseña introducida no es valida</span>
 
-		<b>Nombre: </b><input type="text" name="nombre" id="nombre" class="form-control" placeholder="Daniel" value="<?php echo $fila['Nombre'] ?>"><br>
+		<b style="color: white;">Nombre: </b><input type="text" name="nombre" id="nombre" class="form-control" placeholder="Daniel" value="<?php echo $fila['Nombre'] ?>">
 		<span id="nombre_error">El Nombre introducido no es valido</span>
 
-		<b>Apellido1: </b><input type="text" name="apellido1" id="apellido1" class="form-control" placeholder="Ortiz" value="<?php echo $fila['Apellido1'] ?>"><br>
+		<b style="color: white;">Apellido1: </b><input type="text" name="apellido1" id="apellido1" class="form-control" placeholder="Ortiz" value="<?php echo $fila['Apellido1'] ?>">
 		<span id="apellido1_error">Lo introducido no es un apellido</span>
 
-		<b>Apellido2: </b><input type="text" name="apellido2" id="apellido2" class="form-control" placeholder="Jimenez" value="<?php echo $fila['Apellido2'] ?>"><br>
+		<b style="color: white;">Apellido2: </b><input type="text" name="apellido2" id="apellido2" class="form-control" placeholder="Jimenez" value="<?php echo $fila['Apellido2'] ?>">
 		<span id="apellido2_error">Lo introducido no es un apellido</span>
 
-		<b>Telefono: </b><input type="text" name="telefono" id="telefono" class="form-control" placeholder="678485671" value="<?php echo $fila['Telefono'] ?>"><br>
+		<b style="color: white;">Telefono: </b><input type="text" name="telefono" id="telefono" class="form-control" placeholder="678485671" value="<?php echo $fila['Telefono'] ?>">
 		<span id="telefono_error">El numero de telefono introducido no es valido</span>
 
-		<b>Email: </b><input type="text" name="email" id="email"  class="form-control" placeholder="mcmartigan3turq@gmail.com" value="<?php echo $fila['Email'] ?>"><br>
+		<b style="color: white;">Email: </b><input type="text" name="email" id="email"  class="form-control" placeholder="mcmartigan3turq@gmail.com" value="<?php echo $fila['Email'] ?>">
 		<span id="email_error">El email introducido no es valido</span>
 
-		<b>CP: </b><input type="text" name="cp" id="cp" class="form-control" placeholder="52005" value="<?php echo $fila['CP'] ?>"><br>
+		<b style="color: white;">CP: </b><input type="text" name="cp" id="cp" class="form-control" placeholder="52005" value="<?php echo $fila['CP'] ?>">
 		<span id="cp_error">El CP introducido no es valido</span>
 
-		<b>Provincia: </b><input type="text" name="provincia" id="provincia" class="form-control" placeholder="Melilla" value="<?php echo $fila['Provincia'] ?>"><br>
+		<b style="color: white;">Provincia: </b><input type="text" name="provincia" id="provincia" class="form-control" placeholder="Melilla" value="<?php echo $fila['Provincia'] ?>">
 		<span id="provincia_error">Lo introducido no concuerda con ninguna pronvicia</span>
 
-		<b>ComunidadAutonoma: </b><input type="text" name="comunidadautonoma" id="comunidadautonoma"  class="form-control" placeholder="Melilla" value="<?php echo $fila['ComunidadAutonoma'] ?>"><br>
+		<b style="color: white;">ComunidadAutonoma: </b><input type="text" name="comunidadautonoma" id="comunidadautonoma"  class="form-control" placeholder="Melilla" value="<?php echo $fila['ComunidadAutonoma'] ?>">
 		<span id="comunidadautonoma_error">Lo introducido no concuerda con ninguna comunidad autonoma</span>
 
-		<b>Dni: </b><input type="text" name="dni" id="dni"  class="form-control" placeholder="45314598k" value="<?php echo $fila['Dni'] ?>"><br>
+		<b style="color: white;">Dni: </b><input type="text" name="dni" id="dni"  class="form-control" placeholder="45314598k" value="<?php echo $fila['Dni'] ?>">
 		<span id="dni_error">El Dni introducido no es correcto</span>	
 
 		<input type="submit" value="Actualizar" name="btnregistrar"><br>
@@ -138,7 +138,7 @@
  </footer>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/ingresar_usuario.js"></script>
+<script type="text/javascript" src="js/validacion.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </body>

@@ -14,7 +14,7 @@
 	$nombre = $_POST['nombre'];
 	$precio = $_POST['precio'];	
 	$descripcion = $_POST['descripcion'];
-	$idbotas = $_POST['idcamisetas'];
+	$idcamisetas = $_POST['idcamisetas'];
 
 //coge el nombre de la imagen que hemos insertado nueva
 
@@ -34,7 +34,7 @@
 
 //utilizamos la funcion para modificar la camiseta
 
-	$consulta = modificarcamiseta($conexion,$nombre,$precio,$descripcion,$idbotas,$rutaimagen);
+	$consulta = modificarcamiseta($conexion,$nombre,$precio,$descripcion,$idcamisetas,$rutaimagen);
 
 //nos lleva a la pagina de juegos para un user admin
 	

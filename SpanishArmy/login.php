@@ -24,9 +24,16 @@
   		</ol>
 	</nav>
 
- 		<div class="card" id="card-login" style="width: 30rem; height: 28rem;" >
-	<div class="card-body">
+ 		<div class="card" id="card-login" style="width: 30rem; height: 37rem; margin-bottom: 3%;" >
+		<div class="card-body">
 		<form class="row g-3" action="comprueba_usuario.php" method="post" id="login" novalidate onsubmit="return validarFormulario();"> 
+			<p>
+                            <?php
+                                if(isset($_GET['action']) && $_GET['action'] == "correoEnviado"){
+                                    echo '<h5 style="color: red; ">!!SE HA ENVIADO UN CORREO A SU EMAIL!!</h5>';
+                                }
+                            ?>
+            </p>
 			<div class="col-md-6">
 			<label class="form-label" style="color: white;"><b>Usuario: </b></label>
 			<input type="text" name="usuario" id="usuario" class="form-control" placeholder="Mcmartigan13@">

@@ -17,8 +17,12 @@
 
 	borrarusuario($conexion,$idUsuario);
 
+	session_start();
+
+	session_destroy();
+
 //Nos lleva a la pagina de usuario del admin
 	
-	header('Location: paneladmin.php');
+	header('Location: home.php');
 
 ?>

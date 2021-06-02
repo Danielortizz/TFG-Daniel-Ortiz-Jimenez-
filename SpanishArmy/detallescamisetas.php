@@ -56,9 +56,9 @@
 				<img src="<?php echo $mostrar['Imagen'] ?>" id="ñao" class="card-img-top">
 		  			<div class="card-body" text-align="center">
 			    		<h5 class="card-title" text-align="center" id="titulocarta"><b> <?php echo $mostrar['Nombre'] ?> </b></h5>
-					   		<p class="card-text" align="center" id="preciocarta">Precio: <b> <?php echo $mostrar['Precio'] ?> </b></p>
 					   		<p class="card-text" align="center" id="descripcioncarta"><b> <?php echo $mostrar['Descripcion'] ?> </b></p>
 					   		<p align="center" ><a style="color: black; align-content: center;" class="btn btn-light" href="insertarCamisetacarrito.php?idcamisetas=<?php echo $mostrar['idcamisetas']; ?>" value="Comprar" name="Comprar"><b>AÑADIR AL CARRITO</b></a></p>
+					   		<p class="card-text" align="center" id="preciocarta">Precio: <b> <?php echo $mostrar['Precio'] ?> </b></p>
 					   		<ul class="nav justify-content-end">
 							</ul>
 					   		
